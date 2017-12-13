@@ -25,7 +25,7 @@ namespace MoviesWebApp.Controllers
             return Challenge(new AuthenticationProperties
             {
                 RedirectUri = returnUrl ?? "/"
-            }, "Google");
+            }, "oidc");
 
             //return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
@@ -61,8 +61,9 @@ namespace MoviesWebApp.Controllers
 
         public async Task<IActionResult> Logout()
         {
-            await HttpContext.SignOutAsync("Cookies");
-            return RedirectToAction("Index", "Home");
+            //await HttpContext.SignOutAsync("Cookies");
+            //return RedirectToAction("Index", "Home");
+            return SignOut(new AuthenticationProperties() { RedirectUri = "/" }, "Cookies", "oidc");
         }
 
         public IActionResult AccessDenied()

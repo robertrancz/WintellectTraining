@@ -1,0 +1,1880 @@
+2017-12-13 11:43:55.548 +02:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-12-13 11:43:55.865 +02:00 [Debug] Using "idsrv" as default scheme for authentication
+2017-12-13 11:43:55.879 +02:00 [Debug] Using "idsrv" as default scheme for sign-in
+2017-12-13 11:43:55.880 +02:00 [Debug] Using "idsrv" as default scheme for sign-out
+2017-12-13 11:43:55.880 +02:00 [Debug] Using "idsrv" as default scheme for challenge
+2017-12-13 11:43:55.881 +02:00 [Debug] Using "idsrv" as default scheme for forbid
+2017-12-13 11:48:22.138 +02:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-12-13 11:48:22.230 +02:00 [Debug] Using "idsrv" as default scheme for authentication
+2017-12-13 11:48:22.236 +02:00 [Debug] Using "idsrv" as default scheme for sign-in
+2017-12-13 11:48:22.237 +02:00 [Debug] Using "idsrv" as default scheme for sign-out
+2017-12-13 11:48:22.237 +02:00 [Debug] Using "idsrv" as default scheme for challenge
+2017-12-13 11:48:22.237 +02:00 [Debug] Using "idsrv" as default scheme for forbid
+2017-12-13 12:01:56.093 +02:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type "Discovery"
+2017-12-13 12:01:56.135 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-12-13 12:01:56.138 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-12-13 12:01:56.162 +02:00 [Debug] Start discovery request
+2017-12-13 12:01:57.192 +02:00 [Debug] Request path "/.well-known/openid-configuration/jwks" matched to endpoint type "Discovery"
+2017-12-13 12:01:57.259 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint"
+2017-12-13 12:01:57.261 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2017-12-13 12:01:57.338 +02:00 [Debug] Start key discovery request
+2017-12-13 12:01:57.755 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type "Authorize"
+2017-12-13 12:01:57.775 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-12-13 12:01:57.777 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-12-13 12:01:57.795 +02:00 [Debug] Start authorize request
+2017-12-13 12:01:57.824 +02:00 [Debug] No user present in authorize request
+2017-12-13 12:01:57.836 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:01:57.956 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:01:58.078 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"ResponseType\": \"id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"implicit\",
+  \"RequestedScopes\": \"openid profile email\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kyBvKQrHOOaK2P9r9lrg-KFpo6-TEOI9sIOYNjBLmwFmlSQMiFcNJZvTwJ3C1KyO1kvVK5T6cT17Yllrmi4AU02yJBQUVr6upjGnGbJLgTcBRCXyXYLpy_E60ajFlaJl76O_13P28p08cSk5kcoXDg8qLwdXxNt8_w4zHS3DXawQcchcxHlgj7ua1sRUxbVqVEOrkbPGSYoevXj452tyoiY_-TCEYyMekjmoVLVfG5pt9hX_84khyOfWbyyJa3bRG0rXphYUtzlzxoNwvf1NH6K\",
+  \"Nonce\": \"636487561176564837.ZTBhZGJjYTUtMWFhOC00YjYwLTlkZWMtMzBmOTVjNTY3ZjYwOTUzNTZkMDYtMjBkNS00Y2RkLTgxZDgtYjM3NjUwN2ZlNTU2\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"id_token\",
+    \"scope\": \"openid profile email\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487561176564837.ZTBhZGJjYTUtMWFhOC00YjYwLTlkZWMtMzBmOTVjNTY3ZjYwOTUzNTZkMDYtMjBkNS00Y2RkLTgxZDgtYjM3NjUwN2ZlNTU2\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kyBvKQrHOOaK2P9r9lrg-KFpo6-TEOI9sIOYNjBLmwFmlSQMiFcNJZvTwJ3C1KyO1kvVK5T6cT17Yllrmi4AU02yJBQUVr6upjGnGbJLgTcBRCXyXYLpy_E60ajFlaJl76O_13P28p08cSk5kcoXDg8qLwdXxNt8_w4zHS3DXawQcchcxHlgj7ua1sRUxbVqVEOrkbPGSYoevXj452tyoiY_-TCEYyMekjmoVLVfG5pt9hX_84khyOfWbyyJa3bRG0rXphYUtzlzxoNwvf1NH6K\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:01:58.162 +02:00 [Information] Showing login: User is not authenticated
+2017-12-13 12:01:58.970 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:01:58.971 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:02:29.051 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:02:29.142 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:02:29.407 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:02:29.433 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:02:29.455 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:02:29.462 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:02:29.468 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:02:29.511 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:02:29.554 +02:00 [Debug] User in authorize request: "user5"
+2017-12-13 12:02:29.555 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:02:29.556 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:02:29.558 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user5\",
+  \"ResponseType\": \"id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"implicit\",
+  \"RequestedScopes\": \"openid profile email\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kyBvKQrHOOaK2P9r9lrg-KFpo6-TEOI9sIOYNjBLmwFmlSQMiFcNJZvTwJ3C1KyO1kvVK5T6cT17Yllrmi4AU02yJBQUVr6upjGnGbJLgTcBRCXyXYLpy_E60ajFlaJl76O_13P28p08cSk5kcoXDg8qLwdXxNt8_w4zHS3DXawQcchcxHlgj7ua1sRUxbVqVEOrkbPGSYoevXj452tyoiY_-TCEYyMekjmoVLVfG5pt9hX_84khyOfWbyyJa3bRG0rXphYUtzlzxoNwvf1NH6K\",
+  \"Nonce\": \"636487561176564837.ZTBhZGJjYTUtMWFhOC00YjYwLTlkZWMtMzBmOTVjNTY3ZjYwOTUzNTZkMDYtMjBkNS00Y2RkLTgxZDgtYjM3NjUwN2ZlNTU2\",
+  \"SessionId\": \"96277e9300146b983c820dea8be81b4b\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"id_token\",
+    \"scope\": \"openid profile email\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487561176564837.ZTBhZGJjYTUtMWFhOC00YjYwLTlkZWMtMzBmOTVjNTY3ZjYwOTUzNTZkMDYtMjBkNS00Y2RkLTgxZDgtYjM3NjUwN2ZlNTU2\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kyBvKQrHOOaK2P9r9lrg-KFpo6-TEOI9sIOYNjBLmwFmlSQMiFcNJZvTwJ3C1KyO1kvVK5T6cT17Yllrmi4AU02yJBQUVr6upjGnGbJLgTcBRCXyXYLpy_E60ajFlaJl76O_13P28p08cSk5kcoXDg8qLwdXxNt8_w4zHS3DXawQcchcxHlgj7ua1sRUxbVqVEOrkbPGSYoevXj452tyoiY_-TCEYyMekjmoVLVfG5pt9hX_84khyOfWbyyJa3bRG0rXphYUtzlzxoNwvf1NH6K\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:02:29.649 +02:00 [Debug] "user_consent" grant with value: "movie_client|user5" not found in store.
+2017-12-13 12:02:29.651 +02:00 [Debug] Found no prior consent from consent store, consent is required
+2017-12-13 12:02:29.651 +02:00 [Information] Showing consent: User has not yet consented
+2017-12-13 12:02:29.701 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:02:29.708 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:02:29.840 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:02:29.840 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:02:36.990 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:02:37.011 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:02:37.262 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:02:37.264 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:02:37.368 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:02:37.374 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:02:37.381 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:02:37.382 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:02:37.383 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:02:37.389 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:02:37.420 +02:00 [Debug] User in authorize request: "user5"
+2017-12-13 12:02:37.425 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:02:37.437 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:02:37.447 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user5\",
+  \"ResponseType\": \"id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"implicit\",
+  \"RequestedScopes\": \"openid profile email\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kyBvKQrHOOaK2P9r9lrg-KFpo6-TEOI9sIOYNjBLmwFmlSQMiFcNJZvTwJ3C1KyO1kvVK5T6cT17Yllrmi4AU02yJBQUVr6upjGnGbJLgTcBRCXyXYLpy_E60ajFlaJl76O_13P28p08cSk5kcoXDg8qLwdXxNt8_w4zHS3DXawQcchcxHlgj7ua1sRUxbVqVEOrkbPGSYoevXj452tyoiY_-TCEYyMekjmoVLVfG5pt9hX_84khyOfWbyyJa3bRG0rXphYUtzlzxoNwvf1NH6K\",
+  \"Nonce\": \"636487561176564837.ZTBhZGJjYTUtMWFhOC00YjYwLTlkZWMtMzBmOTVjNTY3ZjYwOTUzNTZkMDYtMjBkNS00Y2RkLTgxZDgtYjM3NjUwN2ZlNTU2\",
+  \"SessionId\": \"96277e9300146b983c820dea8be81b4b\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"id_token\",
+    \"scope\": \"openid profile email\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487561176564837.ZTBhZGJjYTUtMWFhOC00YjYwLTlkZWMtMzBmOTVjNTY3ZjYwOTUzNTZkMDYtMjBkNS00Y2RkLTgxZDgtYjM3NjUwN2ZlNTU2\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kyBvKQrHOOaK2P9r9lrg-KFpo6-TEOI9sIOYNjBLmwFmlSQMiFcNJZvTwJ3C1KyO1kvVK5T6cT17Yllrmi4AU02yJBQUVr6upjGnGbJLgTcBRCXyXYLpy_E60ajFlaJl76O_13P28p08cSk5kcoXDg8qLwdXxNt8_w4zHS3DXawQcchcxHlgj7ua1sRUxbVqVEOrkbPGSYoevXj452tyoiY_-TCEYyMekjmoVLVfG5pt9hX_84khyOfWbyyJa3bRG0rXphYUtzlzxoNwvf1NH6K\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:02:37.472 +02:00 [Debug] "user_consent" grant with value: "movie_client|user5" not found in store.
+2017-12-13 12:02:37.482 +02:00 [Debug] Found no prior consent from consent store, consent is required
+2017-12-13 12:02:37.536 +02:00 [Information] User consented to scopes: ["openid", "profile", "email"]
+2017-12-13 12:02:37.611 +02:00 [Debug] User indicated to remember consent for scopes: ["openid", "profile", "email"]
+2017-12-13 12:02:37.630 +02:00 [Debug] Client allows remembering consent, and consent given. Updating consent store for subject: "user5"
+2017-12-13 12:02:37.864 +02:00 [Debug] Creating Implicit Flow response.
+2017-12-13 12:02:37.917 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:02:37.945 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["name", "family_name", "given_name", "middle_name", "nickname", "preferred_username", "profile", "picture", "website", "gender", "birthdate", "zoneinfo", "locale", "updated_at", "email", "email_verified"] via "ClaimsProviderIdentityToken"
+2017-12-13 12:02:37.955 +02:00 [Debug] Issued claims: ["name", "email"]
+2017-12-13 12:02:38.317 +02:00 [Information] Authorize endpoint response
+"{
+  \"SubjectId\": \"user5\",
+  \"ClientId\": \"movie_client\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kyBvKQrHOOaK2P9r9lrg-KFpo6-TEOI9sIOYNjBLmwFmlSQMiFcNJZvTwJ3C1KyO1kvVK5T6cT17Yllrmi4AU02yJBQUVr6upjGnGbJLgTcBRCXyXYLpy_E60ajFlaJl76O_13P28p08cSk5kcoXDg8qLwdXxNt8_w4zHS3DXawQcchcxHlgj7ua1sRUxbVqVEOrkbPGSYoevXj452tyoiY_-TCEYyMekjmoVLVfG5pt9hX_84khyOfWbyyJa3bRG0rXphYUtzlzxoNwvf1NH6K\",
+  \"Scope\": \"openid profile email\"
+}"
+2017-12-13 12:02:38.412 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:02:38.413 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:12:24.234 +02:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-12-13 12:12:24.385 +02:00 [Debug] Using "idsrv" as default scheme for authentication
+2017-12-13 12:12:24.398 +02:00 [Debug] Using "idsrv" as default scheme for sign-in
+2017-12-13 12:12:24.399 +02:00 [Debug] Using "idsrv" as default scheme for sign-out
+2017-12-13 12:12:24.399 +02:00 [Debug] Using "idsrv" as default scheme for challenge
+2017-12-13 12:12:24.400 +02:00 [Debug] Using "idsrv" as default scheme for forbid
+2017-12-13 12:13:18.479 +02:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type "Discovery"
+2017-12-13 12:13:18.500 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-12-13 12:13:18.502 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-12-13 12:13:18.525 +02:00 [Debug] Start discovery request
+2017-12-13 12:13:19.156 +02:00 [Debug] Request path "/.well-known/openid-configuration/jwks" matched to endpoint type "Discovery"
+2017-12-13 12:13:19.171 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint"
+2017-12-13 12:13:19.174 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2017-12-13 12:13:19.193 +02:00 [Debug] Start key discovery request
+2017-12-13 12:13:19.514 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type "Authorize"
+2017-12-13 12:13:19.533 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-12-13 12:13:19.535 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-12-13 12:13:19.555 +02:00 [Debug] Start authorize request
+2017-12-13 12:13:19.591 +02:00 [Debug] No user present in authorize request
+2017-12-13 12:13:19.606 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:13:19.647 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:13:19.651 +02:00 [Debug] No PKCE used.
+2017-12-13 12:13:19.788 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:13:19.825 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kxz2nfv2Z1OPR9HzUSrhdPDCC-_-WU-cmtYKpT8OX3InqI1Rajb0poJGErJjyFBt8XydwdLSAHw0lMp25NS7yt0Q3bhcQWoHPPO9im7sTTHc2Co6u1-FB_BBMMVHH_Q0i4EJN83SpJGcpIU1LHANznrLxQk8gbXTHva_XyL8KbmqN-0oGe5ncOQ7U-U2XsRb8Qvau_G-jHFl11mRglyPAPSdefhbwOxNARvnXMb7wWc3bD0FbBJF5mJU-fyXm1v_6YJ3bOtgIezgEo9Bdfgb3xZ\",
+  \"Nonce\": \"636487567994084777.NWU2ZjlkZGItNTQxOC00YjY1LWI0ZGMtY2RjNjQ2NDNlZjJlMGI2MmFjZGUtZjQ0OS00MTZhLWE0YmItMmU0MDcwZWZhMTNh\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487567994084777.NWU2ZjlkZGItNTQxOC00YjY1LWI0ZGMtY2RjNjQ2NDNlZjJlMGI2MmFjZGUtZjQ0OS00MTZhLWE0YmItMmU0MDcwZWZhMTNh\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kxz2nfv2Z1OPR9HzUSrhdPDCC-_-WU-cmtYKpT8OX3InqI1Rajb0poJGErJjyFBt8XydwdLSAHw0lMp25NS7yt0Q3bhcQWoHPPO9im7sTTHc2Co6u1-FB_BBMMVHH_Q0i4EJN83SpJGcpIU1LHANznrLxQk8gbXTHva_XyL8KbmqN-0oGe5ncOQ7U-U2XsRb8Qvau_G-jHFl11mRglyPAPSdefhbwOxNARvnXMb7wWc3bD0FbBJF5mJU-fyXm1v_6YJ3bOtgIezgEo9Bdfgb3xZ\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:13:19.852 +02:00 [Information] Showing login: User is not authenticated
+2017-12-13 12:13:20.455 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:13:20.456 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:13:20.457 +02:00 [Debug] No PKCE used.
+2017-12-13 12:13:20.459 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:13:32.779 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:13:32.817 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:13:32.886 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:13:32.899 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:13:32.909 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:13:32.917 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:13:32.919 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:13:32.948 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:13:32.966 +02:00 [Debug] User in authorize request: "user5"
+2017-12-13 12:13:32.967 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:13:32.969 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:13:32.970 +02:00 [Debug] No PKCE used.
+2017-12-13 12:13:32.972 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:13:32.975 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user5\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kxz2nfv2Z1OPR9HzUSrhdPDCC-_-WU-cmtYKpT8OX3InqI1Rajb0poJGErJjyFBt8XydwdLSAHw0lMp25NS7yt0Q3bhcQWoHPPO9im7sTTHc2Co6u1-FB_BBMMVHH_Q0i4EJN83SpJGcpIU1LHANznrLxQk8gbXTHva_XyL8KbmqN-0oGe5ncOQ7U-U2XsRb8Qvau_G-jHFl11mRglyPAPSdefhbwOxNARvnXMb7wWc3bD0FbBJF5mJU-fyXm1v_6YJ3bOtgIezgEo9Bdfgb3xZ\",
+  \"Nonce\": \"636487567994084777.NWU2ZjlkZGItNTQxOC00YjY1LWI0ZGMtY2RjNjQ2NDNlZjJlMGI2MmFjZGUtZjQ0OS00MTZhLWE0YmItMmU0MDcwZWZhMTNh\",
+  \"SessionId\": \"7c416c8e1026a1b50f7f2220a12f2b5c\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487567994084777.NWU2ZjlkZGItNTQxOC00YjY1LWI0ZGMtY2RjNjQ2NDNlZjJlMGI2MmFjZGUtZjQ0OS00MTZhLWE0YmItMmU0MDcwZWZhMTNh\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kxz2nfv2Z1OPR9HzUSrhdPDCC-_-WU-cmtYKpT8OX3InqI1Rajb0poJGErJjyFBt8XydwdLSAHw0lMp25NS7yt0Q3bhcQWoHPPO9im7sTTHc2Co6u1-FB_BBMMVHH_Q0i4EJN83SpJGcpIU1LHANznrLxQk8gbXTHva_XyL8KbmqN-0oGe5ncOQ7U-U2XsRb8Qvau_G-jHFl11mRglyPAPSdefhbwOxNARvnXMb7wWc3bD0FbBJF5mJU-fyXm1v_6YJ3bOtgIezgEo9Bdfgb3xZ\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:13:33.048 +02:00 [Debug] "user_consent" grant with value: "movie_client|user5" not found in store.
+2017-12-13 12:13:33.050 +02:00 [Debug] Found no prior consent from consent store, consent is required
+2017-12-13 12:13:33.052 +02:00 [Information] Showing consent: User has not yet consented
+2017-12-13 12:13:33.082 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:13:33.089 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:13:33.219 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:13:33.220 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:13:33.221 +02:00 [Debug] No PKCE used.
+2017-12-13 12:13:33.222 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:13:51.100 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:13:51.120 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:13:51.453 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:13:51.458 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:13:51.461 +02:00 [Debug] No PKCE used.
+2017-12-13 12:13:51.462 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:13:51.619 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:13:51.637 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:13:51.649 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:13:51.656 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:13:51.678 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:13:51.716 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:13:51.739 +02:00 [Debug] User in authorize request: "user5"
+2017-12-13 12:13:51.740 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:13:51.741 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:13:51.743 +02:00 [Debug] No PKCE used.
+2017-12-13 12:13:51.744 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:13:51.746 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user5\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kxz2nfv2Z1OPR9HzUSrhdPDCC-_-WU-cmtYKpT8OX3InqI1Rajb0poJGErJjyFBt8XydwdLSAHw0lMp25NS7yt0Q3bhcQWoHPPO9im7sTTHc2Co6u1-FB_BBMMVHH_Q0i4EJN83SpJGcpIU1LHANznrLxQk8gbXTHva_XyL8KbmqN-0oGe5ncOQ7U-U2XsRb8Qvau_G-jHFl11mRglyPAPSdefhbwOxNARvnXMb7wWc3bD0FbBJF5mJU-fyXm1v_6YJ3bOtgIezgEo9Bdfgb3xZ\",
+  \"Nonce\": \"636487567994084777.NWU2ZjlkZGItNTQxOC00YjY1LWI0ZGMtY2RjNjQ2NDNlZjJlMGI2MmFjZGUtZjQ0OS00MTZhLWE0YmItMmU0MDcwZWZhMTNh\",
+  \"SessionId\": \"7c416c8e1026a1b50f7f2220a12f2b5c\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487567994084777.NWU2ZjlkZGItNTQxOC00YjY1LWI0ZGMtY2RjNjQ2NDNlZjJlMGI2MmFjZGUtZjQ0OS00MTZhLWE0YmItMmU0MDcwZWZhMTNh\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kxz2nfv2Z1OPR9HzUSrhdPDCC-_-WU-cmtYKpT8OX3InqI1Rajb0poJGErJjyFBt8XydwdLSAHw0lMp25NS7yt0Q3bhcQWoHPPO9im7sTTHc2Co6u1-FB_BBMMVHH_Q0i4EJN83SpJGcpIU1LHANznrLxQk8gbXTHva_XyL8KbmqN-0oGe5ncOQ7U-U2XsRb8Qvau_G-jHFl11mRglyPAPSdefhbwOxNARvnXMb7wWc3bD0FbBJF5mJU-fyXm1v_6YJ3bOtgIezgEo9Bdfgb3xZ\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:13:51.802 +02:00 [Debug] "user_consent" grant with value: "movie_client|user5" not found in store.
+2017-12-13 12:13:51.804 +02:00 [Debug] Found no prior consent from consent store, consent is required
+2017-12-13 12:13:51.859 +02:00 [Information] User consented to scopes: ["openid", "profile", "email", "movie_api"]
+2017-12-13 12:13:51.912 +02:00 [Debug] User indicated to remember consent for scopes: ["openid", "profile", "email", "movie_api"]
+2017-12-13 12:13:51.930 +02:00 [Debug] Client allows remembering consent, and consent given. Updating consent store for subject: "user5"
+2017-12-13 12:13:52.016 +02:00 [Debug] Creating Hybrid Flow response.
+2017-12-13 12:13:52.152 +02:00 [Debug] Creating Implicit Flow response.
+2017-12-13 12:13:52.201 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:13:52.210 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:13:52.541 +02:00 [Information] Authorize endpoint response
+"{
+  \"SubjectId\": \"user5\",
+  \"ClientId\": \"movie_client\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kxz2nfv2Z1OPR9HzUSrhdPDCC-_-WU-cmtYKpT8OX3InqI1Rajb0poJGErJjyFBt8XydwdLSAHw0lMp25NS7yt0Q3bhcQWoHPPO9im7sTTHc2Co6u1-FB_BBMMVHH_Q0i4EJN83SpJGcpIU1LHANznrLxQk8gbXTHva_XyL8KbmqN-0oGe5ncOQ7U-U2XsRb8Qvau_G-jHFl11mRglyPAPSdefhbwOxNARvnXMb7wWc3bD0FbBJF5mJU-fyXm1v_6YJ3bOtgIezgEo9Bdfgb3xZ\",
+  \"Scope\": \"openid profile email movie_api\"
+}"
+2017-12-13 12:13:52.624 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:13:52.629 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:13:53.111 +02:00 [Debug] Request path "/connect/token" matched to endpoint type "Token"
+2017-12-13 12:13:53.127 +02:00 [Debug] Endpoint enabled: "Token", successfully created handler: "IdentityServer4.Endpoints.TokenEndpoint"
+2017-12-13 12:13:53.129 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2017-12-13 12:13:53.192 +02:00 [Debug] Start token request.
+2017-12-13 12:13:53.226 +02:00 [Debug] Start client validation
+2017-12-13 12:13:53.242 +02:00 [Debug] Start parsing Basic Authentication secret
+2017-12-13 12:13:53.253 +02:00 [Debug] Start parsing for secret in post body
+2017-12-13 12:13:53.255 +02:00 [Debug] Parser found secret: "PostBodySecretParser"
+2017-12-13 12:13:53.256 +02:00 [Debug] Secret id found: "movie_client"
+2017-12-13 12:13:53.298 +02:00 [Debug] Secret validator success: "HashedSharedSecretValidator"
+2017-12-13 12:13:53.298 +02:00 [Debug] Client validation success
+2017-12-13 12:13:53.315 +02:00 [Debug] Start token request validation
+2017-12-13 12:13:53.366 +02:00 [Debug] Start validation of authorization code token request
+2017-12-13 12:13:53.452 +02:00 [Debug] Validation of authorization code token request success
+2017-12-13 12:13:53.476 +02:00 [Information] Token request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"GrantType\": \"authorization_code\",
+  \"AuthorizationCode\": \"c456bbf593ab6de6fe76d191aac3f315d3319878aead66907369dc729d8232dc\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"client_secret\": \"***REDACTED***\",
+    \"code\": \"c456bbf593ab6de6fe76d191aac3f315d3319878aead66907369dc729d8232dc\",
+    \"grant_type\": \"authorization_code\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\"
+  }
+}"
+2017-12-13 12:13:53.678 +02:00 [Debug] Getting claims for access token for client: "movie_client"
+2017-12-13 12:13:53.680 +02:00 [Debug] Getting claims for access token for subject: "user5"
+2017-12-13 12:13:53.693 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["role"] via "ClaimsProviderAccessToken"
+2017-12-13 12:13:53.701 +02:00 [Debug] Issued claims: ["role"]
+2017-12-13 12:13:53.728 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:13:53.730 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:13:53.766 +02:00 [Debug] Token request success.
+2017-12-13 12:13:54.276 +02:00 [Debug] Request path "/connect/userinfo" matched to endpoint type "Userinfo"
+2017-12-13 12:13:54.280 +02:00 [Debug] Endpoint enabled: "Userinfo", successfully created handler: "IdentityServer4.Endpoints.UserInfoEndpoint"
+2017-12-13 12:13:54.281 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2017-12-13 12:13:54.300 +02:00 [Debug] Start userinfo request
+2017-12-13 12:13:54.309 +02:00 [Debug] Bearer token found in header
+2017-12-13 12:13:54.388 +02:00 [Debug] Token validation success
+"{
+  \"ValidateLifetime\": true,
+  \"AccessTokenType\": \"Jwt\",
+  \"ExpectedScope\": \"openid\",
+  \"Claims\": {
+    \"nbf\": 1513160033,
+    \"exp\": 1513163633,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": [
+      \"http://localhost:1941/resources\",
+      \"movie_api\"
+    ],
+    \"client_id\": \"movie_client\",
+    \"sub\": \"user5\",
+    \"auth_time\": 1513160012,
+    \"idp\": \"local\",
+    \"role\": \"Admin\",
+    \"scope\": [
+      \"openid\",
+      \"profile\",
+      \"email\",
+      \"movie_api\"
+    ],
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:13:54.406 +02:00 [Debug] Creating userinfo response
+2017-12-13 12:13:54.418 +02:00 [Debug] Scopes in access token: "openid profile email movie_api"
+2017-12-13 12:13:54.428 +02:00 [Debug] Requested claim types: "sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified"
+2017-12-13 12:13:54.429 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["sub", "name", "family_name", "given_name", "middle_name", "nickname", "preferred_username", "profile", "picture", "website", "gender", "birthdate", "zoneinfo", "locale", "updated_at", "email", "email_verified"] via "UserInfoEndpoint"
+2017-12-13 12:13:54.433 +02:00 [Debug] Issued claims: ["name", "email"]
+2017-12-13 12:13:54.434 +02:00 [Information] Profile service returned to the following claim types: "name email"
+2017-12-13 12:13:54.463 +02:00 [Debug] End userinfo request
+2017-12-13 12:17:13.160 +02:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type "Discovery"
+2017-12-13 12:17:13.162 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-12-13 12:17:13.164 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-12-13 12:17:13.207 +02:00 [Debug] Start discovery request
+2017-12-13 12:17:13.644 +02:00 [Debug] Request path "/.well-known/openid-configuration/jwks" matched to endpoint type "Discovery"
+2017-12-13 12:17:13.646 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint"
+2017-12-13 12:17:13.647 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2017-12-13 12:17:13.652 +02:00 [Debug] Start key discovery request
+2017-12-13 12:17:13.925 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type "Authorize"
+2017-12-13 12:17:13.926 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-12-13 12:17:13.929 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-12-13 12:17:13.955 +02:00 [Debug] Start authorize request
+2017-12-13 12:17:13.963 +02:00 [Debug] No user present in authorize request
+2017-12-13 12:17:13.965 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:17:13.967 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:17:13.968 +02:00 [Debug] No PKCE used.
+2017-12-13 12:17:13.988 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:17:13.991 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kz10-VgGPQNN6p3bKp0GhS6Ki1oF12oEwC5idDQfTztMVvav4xPP0wQ7XV7HPSmd2OyyQudB3OZelNMChMyYBBAGE5nnyvYQ4msyOqmhqBvrfFvh3MK_OfgSS-fqmQ51G8KBO3jLoIn-IhXS_Snwnypc1HnoQqvYLe945xtjJUy_wBmjzV8HPv4tJu5pIVR5h9LPrtBRnoXb0IBfMqPoCc8IiyC1P_x0CM5ADiIoNNt2uhGbX2xPw2EPBspcSTkjc0M_6E2AAjmIpQ8GSaZn9bh\",
+  \"Nonce\": \"636487570338008842.ZjI0YTNlYjgtYmFhMi00YWNkLTkwYzYtZjM0MGY5YThjMWQyOGExOTUxMmMtNWE3Ny00NjE2LTlkZDktZDg4ZDRlMDc4OTI5\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487570338008842.ZjI0YTNlYjgtYmFhMi00YWNkLTkwYzYtZjM0MGY5YThjMWQyOGExOTUxMmMtNWE3Ny00NjE2LTlkZDktZDg4ZDRlMDc4OTI5\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kz10-VgGPQNN6p3bKp0GhS6Ki1oF12oEwC5idDQfTztMVvav4xPP0wQ7XV7HPSmd2OyyQudB3OZelNMChMyYBBAGE5nnyvYQ4msyOqmhqBvrfFvh3MK_OfgSS-fqmQ51G8KBO3jLoIn-IhXS_Snwnypc1HnoQqvYLe945xtjJUy_wBmjzV8HPv4tJu5pIVR5h9LPrtBRnoXb0IBfMqPoCc8IiyC1P_x0CM5ADiIoNNt2uhGbX2xPw2EPBspcSTkjc0M_6E2AAjmIpQ8GSaZn9bh\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:17:14.048 +02:00 [Information] Showing login: User is not authenticated
+2017-12-13 12:17:14.146 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:17:14.147 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:17:14.147 +02:00 [Debug] No PKCE used.
+2017-12-13 12:17:14.148 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:17:19.482 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:17:19.485 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:17:19.547 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:17:19.555 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:17:19.583 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:17:19.585 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:17:19.587 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:17:19.602 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:17:19.604 +02:00 [Debug] User in authorize request: "user5"
+2017-12-13 12:17:19.605 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:17:19.606 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:17:19.606 +02:00 [Debug] No PKCE used.
+2017-12-13 12:17:19.609 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:17:19.610 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user5\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kz10-VgGPQNN6p3bKp0GhS6Ki1oF12oEwC5idDQfTztMVvav4xPP0wQ7XV7HPSmd2OyyQudB3OZelNMChMyYBBAGE5nnyvYQ4msyOqmhqBvrfFvh3MK_OfgSS-fqmQ51G8KBO3jLoIn-IhXS_Snwnypc1HnoQqvYLe945xtjJUy_wBmjzV8HPv4tJu5pIVR5h9LPrtBRnoXb0IBfMqPoCc8IiyC1P_x0CM5ADiIoNNt2uhGbX2xPw2EPBspcSTkjc0M_6E2AAjmIpQ8GSaZn9bh\",
+  \"Nonce\": \"636487570338008842.ZjI0YTNlYjgtYmFhMi00YWNkLTkwYzYtZjM0MGY5YThjMWQyOGExOTUxMmMtNWE3Ny00NjE2LTlkZDktZDg4ZDRlMDc4OTI5\",
+  \"SessionId\": \"7a709c0cee03d72550e2782de9fe460a\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487570338008842.ZjI0YTNlYjgtYmFhMi00YWNkLTkwYzYtZjM0MGY5YThjMWQyOGExOTUxMmMtNWE3Ny00NjE2LTlkZDktZDg4ZDRlMDc4OTI5\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kz10-VgGPQNN6p3bKp0GhS6Ki1oF12oEwC5idDQfTztMVvav4xPP0wQ7XV7HPSmd2OyyQudB3OZelNMChMyYBBAGE5nnyvYQ4msyOqmhqBvrfFvh3MK_OfgSS-fqmQ51G8KBO3jLoIn-IhXS_Snwnypc1HnoQqvYLe945xtjJUy_wBmjzV8HPv4tJu5pIVR5h9LPrtBRnoXb0IBfMqPoCc8IiyC1P_x0CM5ADiIoNNt2uhGbX2xPw2EPBspcSTkjc0M_6E2AAjmIpQ8GSaZn9bh\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:17:19.646 +02:00 [Debug] Consent found in consent store is same as current request, consent is not required
+2017-12-13 12:17:19.647 +02:00 [Debug] Creating Hybrid Flow response.
+2017-12-13 12:17:19.680 +02:00 [Debug] Creating Implicit Flow response.
+2017-12-13 12:17:19.682 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:17:19.683 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:17:19.700 +02:00 [Information] Authorize endpoint response
+"{
+  \"SubjectId\": \"user5\",
+  \"ClientId\": \"movie_client\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kz10-VgGPQNN6p3bKp0GhS6Ki1oF12oEwC5idDQfTztMVvav4xPP0wQ7XV7HPSmd2OyyQudB3OZelNMChMyYBBAGE5nnyvYQ4msyOqmhqBvrfFvh3MK_OfgSS-fqmQ51G8KBO3jLoIn-IhXS_Snwnypc1HnoQqvYLe945xtjJUy_wBmjzV8HPv4tJu5pIVR5h9LPrtBRnoXb0IBfMqPoCc8IiyC1P_x0CM5ADiIoNNt2uhGbX2xPw2EPBspcSTkjc0M_6E2AAjmIpQ8GSaZn9bh\",
+  \"Scope\": \"openid profile email movie_api\"
+}"
+2017-12-13 12:17:19.707 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:17:19.709 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:17:20.126 +02:00 [Debug] Request path "/connect/token" matched to endpoint type "Token"
+2017-12-13 12:17:20.129 +02:00 [Debug] Endpoint enabled: "Token", successfully created handler: "IdentityServer4.Endpoints.TokenEndpoint"
+2017-12-13 12:17:20.130 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2017-12-13 12:17:20.136 +02:00 [Debug] Start token request.
+2017-12-13 12:17:20.138 +02:00 [Debug] Start client validation
+2017-12-13 12:17:20.139 +02:00 [Debug] Start parsing Basic Authentication secret
+2017-12-13 12:17:20.141 +02:00 [Debug] Start parsing for secret in post body
+2017-12-13 12:17:20.147 +02:00 [Debug] Parser found secret: "PostBodySecretParser"
+2017-12-13 12:17:20.148 +02:00 [Debug] Secret id found: "movie_client"
+2017-12-13 12:17:20.149 +02:00 [Debug] Secret validator success: "HashedSharedSecretValidator"
+2017-12-13 12:17:20.150 +02:00 [Debug] Client validation success
+2017-12-13 12:17:20.151 +02:00 [Debug] Start token request validation
+2017-12-13 12:17:20.152 +02:00 [Debug] Start validation of authorization code token request
+2017-12-13 12:17:20.204 +02:00 [Debug] Validation of authorization code token request success
+2017-12-13 12:17:20.205 +02:00 [Information] Token request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"GrantType\": \"authorization_code\",
+  \"AuthorizationCode\": \"64bfa0a55cf47bda343a1a6e6b45c988e6f8b8c2aa399be0d2e9e399c7184449\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"client_secret\": \"***REDACTED***\",
+    \"code\": \"64bfa0a55cf47bda343a1a6e6b45c988e6f8b8c2aa399be0d2e9e399c7184449\",
+    \"grant_type\": \"authorization_code\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\"
+  }
+}"
+2017-12-13 12:17:20.214 +02:00 [Debug] Getting claims for access token for client: "movie_client"
+2017-12-13 12:17:20.215 +02:00 [Debug] Getting claims for access token for subject: "user5"
+2017-12-13 12:17:20.216 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["role"] via "ClaimsProviderAccessToken"
+2017-12-13 12:17:20.217 +02:00 [Debug] Issued claims: ["role"]
+2017-12-13 12:17:20.240 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:17:20.242 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:17:20.265 +02:00 [Debug] Token request success.
+2017-12-13 12:17:20.410 +02:00 [Debug] Request path "/connect/userinfo" matched to endpoint type "Userinfo"
+2017-12-13 12:17:20.413 +02:00 [Debug] Endpoint enabled: "Userinfo", successfully created handler: "IdentityServer4.Endpoints.UserInfoEndpoint"
+2017-12-13 12:17:20.414 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2017-12-13 12:17:20.422 +02:00 [Debug] Start userinfo request
+2017-12-13 12:17:20.423 +02:00 [Debug] Bearer token found in header
+2017-12-13 12:17:20.435 +02:00 [Debug] Token validation success
+"{
+  \"ValidateLifetime\": true,
+  \"AccessTokenType\": \"Jwt\",
+  \"ExpectedScope\": \"openid\",
+  \"Claims\": {
+    \"nbf\": 1513160240,
+    \"exp\": 1513163840,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": [
+      \"http://localhost:1941/resources\",
+      \"movie_api\"
+    ],
+    \"client_id\": \"movie_client\",
+    \"sub\": \"user5\",
+    \"auth_time\": 1513160239,
+    \"idp\": \"local\",
+    \"role\": \"Admin\",
+    \"scope\": [
+      \"openid\",
+      \"profile\",
+      \"email\",
+      \"movie_api\"
+    ],
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:17:20.439 +02:00 [Debug] Creating userinfo response
+2017-12-13 12:17:20.442 +02:00 [Debug] Scopes in access token: "openid profile email movie_api"
+2017-12-13 12:17:20.443 +02:00 [Debug] Requested claim types: "sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified"
+2017-12-13 12:17:20.445 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["sub", "name", "family_name", "given_name", "middle_name", "nickname", "preferred_username", "profile", "picture", "website", "gender", "birthdate", "zoneinfo", "locale", "updated_at", "email", "email_verified"] via "UserInfoEndpoint"
+2017-12-13 12:17:20.450 +02:00 [Debug] Issued claims: ["name", "email"]
+2017-12-13 12:17:20.452 +02:00 [Information] Profile service returned to the following claim types: "name email"
+2017-12-13 12:17:20.483 +02:00 [Debug] End userinfo request
+2017-12-13 12:20:29.566 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:20:29.587 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:20:29.663 +02:00 [Debug] Request path "/connect/endsession" matched to endpoint type "Endsession"
+2017-12-13 12:20:29.668 +02:00 [Debug] Endpoint enabled: "Endsession", successfully created handler: "IdentityServer4.Endpoints.EndSessionEndpoint"
+2017-12-13 12:20:29.669 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.EndSessionEndpoint" for "/connect/endsession"
+2017-12-13 12:20:29.707 +02:00 [Debug] Processing signout request for "user5"
+2017-12-13 12:20:29.736 +02:00 [Debug] Start end session request validation
+2017-12-13 12:20:29.755 +02:00 [Debug] Start identity token validation
+2017-12-13 12:20:29.758 +02:00 [Debug] Client found: "movie_client" / "Moive Review App"
+2017-12-13 12:20:29.771 +02:00 [Debug] Calling into custom token validator: "IdentityServer4.Validation.DefaultCustomTokenValidator"
+2017-12-13 12:20:29.793 +02:00 [Debug] Token validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"ValidateLifetime\": false,
+  \"Claims\": {
+    \"nbf\": 1513160240,
+    \"exp\": 1513160540,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": \"movie_client\",
+    \"nonce\": \"636487570338008842.ZjI0YTNlYjgtYmFhMi00YWNkLTkwYzYtZjM0MGY5YThjMWQyOGExOTUxMmMtNWE3Ny00NjE2LTlkZDktZDg4ZDRlMDc4OTI5\",
+    \"iat\": 1513160240,
+    \"at_hash\": \"bTSCuTX2KXpR3DGT0DhIBA\",
+    \"sid\": \"7a709c0cee03d72550e2782de9fe460a\",
+    \"sub\": \"user5\",
+    \"auth_time\": 1513160239,
+    \"idp\": \"local\",
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:20:29.845 +02:00 [Information] End session request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"SubjectId\": \"user5\",
+  \"PostLogOutUri\": \"http://localhost:32361/signout-callback-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kwIZamXAerkxDTLoPTCb2RwOoK_eI2OKCAorPEkJR4ikLvGyf0lQNXiH4ASyXH1JkvHDNWs0LIv6Sb683QirO-co7rpTwNu4cCaUKcyYlxSCjAqVvGgkq9fITZE_ITvVk8\",
+  \"Raw\": {
+    \"post_logout_redirect_uri\": \"http://localhost:32361/signout-callback-oidc\",
+    \"id_token_hint\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjJkYTlmMTYxMzA5NTZiYjE0ZGQ5ZDc4MTYyNmRkMjYxIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MTMxNjAyNDAsImV4cCI6MTUxMzE2MDU0MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDoxOTQxIiwiYXVkIjoibW92aWVfY2xpZW50Iiwibm9uY2UiOiI2MzY0ODc1NzAzMzgwMDg4NDIuWmpJMFlUTmxZamd0WW1GaE1pMDBZV05rTFRrd1l6WXRaak0wTUdZNVlUaGpNV1F5T0dFeE9UVXhNbU10TldFM055MDBOakUyTFRsa1pEa3RaRGc0WkRSbE1EYzRPVEk1IiwiaWF0IjoxNTEzMTYwMjQwLCJhdF9oYXNoIjoiYlRTQ3VUWDJLWHBSM0RHVDBEaElCQSIsInNpZCI6IjdhNzA5YzBjZWUwM2Q3MjU1MGUyNzgyZGU5ZmU0NjBhIiwic3ViIjoidXNlcjUiLCJhdXRoX3RpbWUiOjE1MTMxNjAyMzksImlkcCI6ImxvY2FsIiwiYW1yIjpbInB3ZCJdfQ.l51EQg_yvb1VTRc0gcUHD1CQTGXlB4RqRRcofIdagTrKPGKVhUuW36V2t5T0oHsSUXS_rtDn9jMG3wVb9IIE6GZQ1zTECflDPoDGdEFYLvEB2KuZtdhFAoGYL2x0O99emOlYNJbkbOeFiff6Q0LCuRiZpXjAuT3UioICOLRJKtsHP5rniDNcSFnZDM7m98Q-D4xcTAuAHsdVKuIrORR0A_voZ9baLtd5214m1jM0IXnZHt08KpcNZ-Ct35P72ftpPmXLucHGOh8-T8PmKBVXsegURl64KEdlL9UOWg-jGLOvARTFWsT2Vtc3RRmtcFZoggs81aS_tzuVRECHME8g9g\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kwIZamXAerkxDTLoPTCb2RwOoK_eI2OKCAorPEkJR4ikLvGyf0lQNXiH4ASyXH1JkvHDNWs0LIv6Sb683QirO-co7rpTwNu4cCaUKcyYlxSCjAqVvGgkq9fITZE_ITvVk8\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:20:29.890 +02:00 [Debug] Success validating end session request from "movie_client"
+2017-12-13 12:20:29.984 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:20:29.995 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:20:30.211 +02:00 [Information] AuthenticationScheme: "idsrv" signed out.
+2017-12-13 12:20:30.803 +02:00 [Debug] Request path "/connect/endsession/callback" matched to endpoint type "Endsession"
+2017-12-13 12:20:30.811 +02:00 [Debug] Endpoint enabled: "Endsession", successfully created handler: "IdentityServer4.Endpoints.EndSessionCallbackEndpoint"
+2017-12-13 12:20:30.814 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.EndSessionCallbackEndpoint" for "/connect/endsession/callback"
+2017-12-13 12:20:30.840 +02:00 [Debug] Processing signout callback request
+2017-12-13 12:20:30.887 +02:00 [Debug] No client front-channel logout URLs
+2017-12-13 12:20:30.889 +02:00 [Debug] No client back-channel logout URLs
+2017-12-13 12:20:30.890 +02:00 [Information] Successful signout callback.
+2017-12-13 12:20:30.918 +02:00 [Debug] No client front-channel iframe urls
+2017-12-13 12:20:30.920 +02:00 [Debug] No client back-channel iframe urls
+2017-12-13 12:20:38.837 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type "Authorize"
+2017-12-13 12:20:38.839 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-12-13 12:20:38.842 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-12-13 12:20:38.850 +02:00 [Debug] Start authorize request
+2017-12-13 12:20:38.851 +02:00 [Debug] No user present in authorize request
+2017-12-13 12:20:38.852 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:20:38.854 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:20:38.855 +02:00 [Debug] No PKCE used.
+2017-12-13 12:20:38.856 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:20:38.857 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kxbcP4KKVX11x-Gwtj-uCDyBm77j3ek34w0DNNFNJKW0X0lxlj9wWSbuzk15-ahGLZQpDILKHY9600_yhEq0JWqOF4BqZs9PmGV94yzZy3kS264O85lRW78VnNScEporsX0XqL1biw1pbNigVPFKM0Prc8L8iE1jkNSc-ngsw79LrrnhhlHSwNsgTfGdCRm6zmS8HvL2e5E6sqfph4HfELBh8jLvyL4-VWPBftj34HMQgj60fY_MlFSA-STGVPJpnsOAnm1HwIlMYp7Eslrlk5T\",
+  \"Nonce\": \"636487572387486065.ZWVhZWVkNGUtNGU4Yi00M2RkLWI5ZTEtZDRkNDEyNjZiNWYwMzIyNTQ3NzctNDgwYi00MmJjLTk0NzYtYzg2OGI4YTdiM2Y2\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487572387486065.ZWVhZWVkNGUtNGU4Yi00M2RkLWI5ZTEtZDRkNDEyNjZiNWYwMzIyNTQ3NzctNDgwYi00MmJjLTk0NzYtYzg2OGI4YTdiM2Y2\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kxbcP4KKVX11x-Gwtj-uCDyBm77j3ek34w0DNNFNJKW0X0lxlj9wWSbuzk15-ahGLZQpDILKHY9600_yhEq0JWqOF4BqZs9PmGV94yzZy3kS264O85lRW78VnNScEporsX0XqL1biw1pbNigVPFKM0Prc8L8iE1jkNSc-ngsw79LrrnhhlHSwNsgTfGdCRm6zmS8HvL2e5E6sqfph4HfELBh8jLvyL4-VWPBftj34HMQgj60fY_MlFSA-STGVPJpnsOAnm1HwIlMYp7Eslrlk5T\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:20:38.877 +02:00 [Information] Showing login: User is not authenticated
+2017-12-13 12:20:38.973 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:20:38.974 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:20:38.975 +02:00 [Debug] No PKCE used.
+2017-12-13 12:20:38.979 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:20:45.724 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:20:45.726 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:20:45.792 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:20:45.800 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:20:45.808 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:20:45.810 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:20:45.811 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:20:45.819 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:20:45.822 +02:00 [Debug] User in authorize request: "user5"
+2017-12-13 12:20:45.823 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:20:45.824 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:20:45.824 +02:00 [Debug] No PKCE used.
+2017-12-13 12:20:45.825 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:20:45.827 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user5\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kxbcP4KKVX11x-Gwtj-uCDyBm77j3ek34w0DNNFNJKW0X0lxlj9wWSbuzk15-ahGLZQpDILKHY9600_yhEq0JWqOF4BqZs9PmGV94yzZy3kS264O85lRW78VnNScEporsX0XqL1biw1pbNigVPFKM0Prc8L8iE1jkNSc-ngsw79LrrnhhlHSwNsgTfGdCRm6zmS8HvL2e5E6sqfph4HfELBh8jLvyL4-VWPBftj34HMQgj60fY_MlFSA-STGVPJpnsOAnm1HwIlMYp7Eslrlk5T\",
+  \"Nonce\": \"636487572387486065.ZWVhZWVkNGUtNGU4Yi00M2RkLWI5ZTEtZDRkNDEyNjZiNWYwMzIyNTQ3NzctNDgwYi00MmJjLTk0NzYtYzg2OGI4YTdiM2Y2\",
+  \"SessionId\": \"80dd0c97242cde87562e64281d26a47e\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487572387486065.ZWVhZWVkNGUtNGU4Yi00M2RkLWI5ZTEtZDRkNDEyNjZiNWYwMzIyNTQ3NzctNDgwYi00MmJjLTk0NzYtYzg2OGI4YTdiM2Y2\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kxbcP4KKVX11x-Gwtj-uCDyBm77j3ek34w0DNNFNJKW0X0lxlj9wWSbuzk15-ahGLZQpDILKHY9600_yhEq0JWqOF4BqZs9PmGV94yzZy3kS264O85lRW78VnNScEporsX0XqL1biw1pbNigVPFKM0Prc8L8iE1jkNSc-ngsw79LrrnhhlHSwNsgTfGdCRm6zmS8HvL2e5E6sqfph4HfELBh8jLvyL4-VWPBftj34HMQgj60fY_MlFSA-STGVPJpnsOAnm1HwIlMYp7Eslrlk5T\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:20:45.863 +02:00 [Debug] Consent found in consent store is same as current request, consent is not required
+2017-12-13 12:20:45.865 +02:00 [Debug] Creating Hybrid Flow response.
+2017-12-13 12:20:45.906 +02:00 [Debug] Creating Implicit Flow response.
+2017-12-13 12:20:45.907 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:20:45.908 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:20:45.934 +02:00 [Information] Authorize endpoint response
+"{
+  \"SubjectId\": \"user5\",
+  \"ClientId\": \"movie_client\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kxbcP4KKVX11x-Gwtj-uCDyBm77j3ek34w0DNNFNJKW0X0lxlj9wWSbuzk15-ahGLZQpDILKHY9600_yhEq0JWqOF4BqZs9PmGV94yzZy3kS264O85lRW78VnNScEporsX0XqL1biw1pbNigVPFKM0Prc8L8iE1jkNSc-ngsw79LrrnhhlHSwNsgTfGdCRm6zmS8HvL2e5E6sqfph4HfELBh8jLvyL4-VWPBftj34HMQgj60fY_MlFSA-STGVPJpnsOAnm1HwIlMYp7Eslrlk5T\",
+  \"Scope\": \"openid profile email movie_api\"
+}"
+2017-12-13 12:20:45.948 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:20:45.953 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:20:46.273 +02:00 [Debug] Request path "/connect/token" matched to endpoint type "Token"
+2017-12-13 12:20:46.274 +02:00 [Debug] Endpoint enabled: "Token", successfully created handler: "IdentityServer4.Endpoints.TokenEndpoint"
+2017-12-13 12:20:46.298 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2017-12-13 12:20:46.308 +02:00 [Debug] Start token request.
+2017-12-13 12:20:46.309 +02:00 [Debug] Start client validation
+2017-12-13 12:20:46.311 +02:00 [Debug] Start parsing Basic Authentication secret
+2017-12-13 12:20:46.312 +02:00 [Debug] Start parsing for secret in post body
+2017-12-13 12:20:46.313 +02:00 [Debug] Parser found secret: "PostBodySecretParser"
+2017-12-13 12:20:46.314 +02:00 [Debug] Secret id found: "movie_client"
+2017-12-13 12:20:46.315 +02:00 [Debug] Secret validator success: "HashedSharedSecretValidator"
+2017-12-13 12:20:46.315 +02:00 [Debug] Client validation success
+2017-12-13 12:20:46.316 +02:00 [Debug] Start token request validation
+2017-12-13 12:20:46.317 +02:00 [Debug] Start validation of authorization code token request
+2017-12-13 12:20:46.394 +02:00 [Debug] Validation of authorization code token request success
+2017-12-13 12:20:46.396 +02:00 [Information] Token request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"GrantType\": \"authorization_code\",
+  \"AuthorizationCode\": \"55c25fb5eecece9f1fa2d92054946b5c38ed30d7fa8e5b5ed873104d68959afb\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"client_secret\": \"***REDACTED***\",
+    \"code\": \"55c25fb5eecece9f1fa2d92054946b5c38ed30d7fa8e5b5ed873104d68959afb\",
+    \"grant_type\": \"authorization_code\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\"
+  }
+}"
+2017-12-13 12:20:46.463 +02:00 [Debug] Getting claims for access token for client: "movie_client"
+2017-12-13 12:20:46.467 +02:00 [Debug] Getting claims for access token for subject: "user5"
+2017-12-13 12:20:46.469 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["role"] via "ClaimsProviderAccessToken"
+2017-12-13 12:20:46.477 +02:00 [Debug] Issued claims: ["role"]
+2017-12-13 12:20:46.517 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:20:46.528 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:20:46.562 +02:00 [Debug] Token request success.
+2017-12-13 12:20:47.063 +02:00 [Debug] Request path "/connect/userinfo" matched to endpoint type "Userinfo"
+2017-12-13 12:20:47.064 +02:00 [Debug] Endpoint enabled: "Userinfo", successfully created handler: "IdentityServer4.Endpoints.UserInfoEndpoint"
+2017-12-13 12:20:47.065 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2017-12-13 12:20:47.097 +02:00 [Debug] Start userinfo request
+2017-12-13 12:20:47.101 +02:00 [Debug] Bearer token found in header
+2017-12-13 12:20:47.113 +02:00 [Debug] Token validation success
+"{
+  \"ValidateLifetime\": true,
+  \"AccessTokenType\": \"Jwt\",
+  \"ExpectedScope\": \"openid\",
+  \"Claims\": {
+    \"nbf\": 1513160446,
+    \"exp\": 1513164046,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": [
+      \"http://localhost:1941/resources\",
+      \"movie_api\"
+    ],
+    \"client_id\": \"movie_client\",
+    \"sub\": \"user5\",
+    \"auth_time\": 1513160445,
+    \"idp\": \"local\",
+    \"role\": \"Admin\",
+    \"scope\": [
+      \"openid\",
+      \"profile\",
+      \"email\",
+      \"movie_api\"
+    ],
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:20:47.119 +02:00 [Debug] Creating userinfo response
+2017-12-13 12:20:47.120 +02:00 [Debug] Scopes in access token: "openid profile email movie_api"
+2017-12-13 12:20:47.122 +02:00 [Debug] Requested claim types: "sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified"
+2017-12-13 12:20:47.124 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["sub", "name", "family_name", "given_name", "middle_name", "nickname", "preferred_username", "profile", "picture", "website", "gender", "birthdate", "zoneinfo", "locale", "updated_at", "email", "email_verified"] via "UserInfoEndpoint"
+2017-12-13 12:20:47.129 +02:00 [Debug] Issued claims: ["name", "email"]
+2017-12-13 12:20:47.129 +02:00 [Information] Profile service returned to the following claim types: "name email"
+2017-12-13 12:20:47.135 +02:00 [Debug] End userinfo request
+2017-12-13 12:23:41.545 +02:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type "Discovery"
+2017-12-13 12:23:41.549 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-12-13 12:23:41.552 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-12-13 12:23:41.559 +02:00 [Debug] Start discovery request
+2017-12-13 12:23:42.075 +02:00 [Debug] Request path "/.well-known/openid-configuration/jwks" matched to endpoint type "Discovery"
+2017-12-13 12:23:42.077 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint"
+2017-12-13 12:23:42.078 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2017-12-13 12:23:42.085 +02:00 [Debug] Start key discovery request
+2017-12-13 12:23:42.288 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type "Authorize"
+2017-12-13 12:23:42.292 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-12-13 12:23:42.293 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-12-13 12:23:42.301 +02:00 [Debug] Start authorize request
+2017-12-13 12:23:42.303 +02:00 [Debug] No user present in authorize request
+2017-12-13 12:23:42.304 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:23:42.305 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:23:42.306 +02:00 [Debug] No PKCE used.
+2017-12-13 12:23:42.307 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:23:42.308 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kzVB8EBxatZUNJrOMH0i_rdsI6etOOmdZJYDkpXn6vZpviRkSgSfhAc4l6Inn7kQ3orJRgvOxzRhb7eVx9MeK6USWjVcIiAwhB2h00Po2f6cpDxOd3wQfG527f5TQpAIsRnRZFs_A9itI0dYfmxvhX9FwkBg4emHsSVSTSGryAtciIkHjY8JCrf44s6Cfbx5rB7tm0HQd6PWK7lXgTECcMFuL5ktVsSQN9FtI1v2iwh4hHeh9VUGwHUbxCklLBPqW9BWs9jVtRsWUE8mMXkuEoC\",
+  \"Nonce\": \"636487574221990993.OTU5MmZlZTUtYjJiNi00MDQwLTk4NTEtZDkzMzEwODM0NWQzNGFmNTljMDAtMjVmMC00MjQ1LTliMzktYWUzMTZmMzQ0MjYz\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487574221990993.OTU5MmZlZTUtYjJiNi00MDQwLTk4NTEtZDkzMzEwODM0NWQzNGFmNTljMDAtMjVmMC00MjQ1LTliMzktYWUzMTZmMzQ0MjYz\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kzVB8EBxatZUNJrOMH0i_rdsI6etOOmdZJYDkpXn6vZpviRkSgSfhAc4l6Inn7kQ3orJRgvOxzRhb7eVx9MeK6USWjVcIiAwhB2h00Po2f6cpDxOd3wQfG527f5TQpAIsRnRZFs_A9itI0dYfmxvhX9FwkBg4emHsSVSTSGryAtciIkHjY8JCrf44s6Cfbx5rB7tm0HQd6PWK7lXgTECcMFuL5ktVsSQN9FtI1v2iwh4hHeh9VUGwHUbxCklLBPqW9BWs9jVtRsWUE8mMXkuEoC\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:23:42.343 +02:00 [Information] Showing login: User is not authenticated
+2017-12-13 12:23:42.470 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:23:42.473 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:23:42.475 +02:00 [Debug] No PKCE used.
+2017-12-13 12:23:42.476 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:23:49.746 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:23:49.748 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:23:49.825 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:23:49.833 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:23:49.839 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:23:49.843 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:23:49.844 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:23:49.850 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:23:49.852 +02:00 [Debug] User in authorize request: "user5"
+2017-12-13 12:23:49.853 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:23:49.854 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:23:49.854 +02:00 [Debug] No PKCE used.
+2017-12-13 12:23:49.856 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:23:49.857 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user5\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kzVB8EBxatZUNJrOMH0i_rdsI6etOOmdZJYDkpXn6vZpviRkSgSfhAc4l6Inn7kQ3orJRgvOxzRhb7eVx9MeK6USWjVcIiAwhB2h00Po2f6cpDxOd3wQfG527f5TQpAIsRnRZFs_A9itI0dYfmxvhX9FwkBg4emHsSVSTSGryAtciIkHjY8JCrf44s6Cfbx5rB7tm0HQd6PWK7lXgTECcMFuL5ktVsSQN9FtI1v2iwh4hHeh9VUGwHUbxCklLBPqW9BWs9jVtRsWUE8mMXkuEoC\",
+  \"Nonce\": \"636487574221990993.OTU5MmZlZTUtYjJiNi00MDQwLTk4NTEtZDkzMzEwODM0NWQzNGFmNTljMDAtMjVmMC00MjQ1LTliMzktYWUzMTZmMzQ0MjYz\",
+  \"SessionId\": \"26083c1f5c7e2df1c9bb36de6c41d01b\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487574221990993.OTU5MmZlZTUtYjJiNi00MDQwLTk4NTEtZDkzMzEwODM0NWQzNGFmNTljMDAtMjVmMC00MjQ1LTliMzktYWUzMTZmMzQ0MjYz\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kzVB8EBxatZUNJrOMH0i_rdsI6etOOmdZJYDkpXn6vZpviRkSgSfhAc4l6Inn7kQ3orJRgvOxzRhb7eVx9MeK6USWjVcIiAwhB2h00Po2f6cpDxOd3wQfG527f5TQpAIsRnRZFs_A9itI0dYfmxvhX9FwkBg4emHsSVSTSGryAtciIkHjY8JCrf44s6Cfbx5rB7tm0HQd6PWK7lXgTECcMFuL5ktVsSQN9FtI1v2iwh4hHeh9VUGwHUbxCklLBPqW9BWs9jVtRsWUE8mMXkuEoC\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:23:49.896 +02:00 [Debug] Consent found in consent store is same as current request, consent is not required
+2017-12-13 12:23:49.897 +02:00 [Debug] Creating Hybrid Flow response.
+2017-12-13 12:23:49.942 +02:00 [Debug] Creating Implicit Flow response.
+2017-12-13 12:23:49.943 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:23:49.945 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:23:49.968 +02:00 [Information] Authorize endpoint response
+"{
+  \"SubjectId\": \"user5\",
+  \"ClientId\": \"movie_client\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kzVB8EBxatZUNJrOMH0i_rdsI6etOOmdZJYDkpXn6vZpviRkSgSfhAc4l6Inn7kQ3orJRgvOxzRhb7eVx9MeK6USWjVcIiAwhB2h00Po2f6cpDxOd3wQfG527f5TQpAIsRnRZFs_A9itI0dYfmxvhX9FwkBg4emHsSVSTSGryAtciIkHjY8JCrf44s6Cfbx5rB7tm0HQd6PWK7lXgTECcMFuL5ktVsSQN9FtI1v2iwh4hHeh9VUGwHUbxCklLBPqW9BWs9jVtRsWUE8mMXkuEoC\",
+  \"Scope\": \"openid profile email movie_api\"
+}"
+2017-12-13 12:23:49.976 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:23:49.979 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:23:50.368 +02:00 [Debug] Request path "/connect/token" matched to endpoint type "Token"
+2017-12-13 12:23:50.375 +02:00 [Debug] Endpoint enabled: "Token", successfully created handler: "IdentityServer4.Endpoints.TokenEndpoint"
+2017-12-13 12:23:50.376 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2017-12-13 12:23:50.384 +02:00 [Debug] Start token request.
+2017-12-13 12:23:50.385 +02:00 [Debug] Start client validation
+2017-12-13 12:23:50.386 +02:00 [Debug] Start parsing Basic Authentication secret
+2017-12-13 12:23:50.387 +02:00 [Debug] Start parsing for secret in post body
+2017-12-13 12:23:50.388 +02:00 [Debug] Parser found secret: "PostBodySecretParser"
+2017-12-13 12:23:50.389 +02:00 [Debug] Secret id found: "movie_client"
+2017-12-13 12:23:50.390 +02:00 [Debug] Secret validator success: "HashedSharedSecretValidator"
+2017-12-13 12:23:50.391 +02:00 [Debug] Client validation success
+2017-12-13 12:23:50.392 +02:00 [Debug] Start token request validation
+2017-12-13 12:23:50.393 +02:00 [Debug] Start validation of authorization code token request
+2017-12-13 12:23:50.445 +02:00 [Debug] Validation of authorization code token request success
+2017-12-13 12:23:50.446 +02:00 [Information] Token request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"GrantType\": \"authorization_code\",
+  \"AuthorizationCode\": \"db38859271678373fa42acc60a8a5a9be18e74092838cc818979d5c00fb629be\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"client_secret\": \"***REDACTED***\",
+    \"code\": \"db38859271678373fa42acc60a8a5a9be18e74092838cc818979d5c00fb629be\",
+    \"grant_type\": \"authorization_code\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\"
+  }
+}"
+2017-12-13 12:23:50.461 +02:00 [Debug] Getting claims for access token for client: "movie_client"
+2017-12-13 12:23:50.462 +02:00 [Debug] Getting claims for access token for subject: "user5"
+2017-12-13 12:23:50.464 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["role"] via "ClaimsProviderAccessToken"
+2017-12-13 12:23:50.465 +02:00 [Debug] Issued claims: ["role"]
+2017-12-13 12:23:50.487 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:23:50.488 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:23:50.517 +02:00 [Debug] Token request success.
+2017-12-13 12:23:50.814 +02:00 [Debug] Request path "/connect/userinfo" matched to endpoint type "Userinfo"
+2017-12-13 12:23:50.815 +02:00 [Debug] Endpoint enabled: "Userinfo", successfully created handler: "IdentityServer4.Endpoints.UserInfoEndpoint"
+2017-12-13 12:23:50.818 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2017-12-13 12:23:50.827 +02:00 [Debug] Start userinfo request
+2017-12-13 12:23:50.828 +02:00 [Debug] Bearer token found in header
+2017-12-13 12:23:50.842 +02:00 [Debug] Token validation success
+"{
+  \"ValidateLifetime\": true,
+  \"AccessTokenType\": \"Jwt\",
+  \"ExpectedScope\": \"openid\",
+  \"Claims\": {
+    \"nbf\": 1513160630,
+    \"exp\": 1513164230,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": [
+      \"http://localhost:1941/resources\",
+      \"movie_api\"
+    ],
+    \"client_id\": \"movie_client\",
+    \"sub\": \"user5\",
+    \"auth_time\": 1513160629,
+    \"idp\": \"local\",
+    \"role\": \"Admin\",
+    \"scope\": [
+      \"openid\",
+      \"profile\",
+      \"email\",
+      \"movie_api\"
+    ],
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:23:50.844 +02:00 [Debug] Creating userinfo response
+2017-12-13 12:23:50.845 +02:00 [Debug] Scopes in access token: "openid profile email movie_api"
+2017-12-13 12:23:50.846 +02:00 [Debug] Requested claim types: "sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified"
+2017-12-13 12:23:50.847 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["sub", "name", "family_name", "given_name", "middle_name", "nickname", "preferred_username", "profile", "picture", "website", "gender", "birthdate", "zoneinfo", "locale", "updated_at", "email", "email_verified"] via "UserInfoEndpoint"
+2017-12-13 12:23:50.852 +02:00 [Debug] Issued claims: ["name", "email"]
+2017-12-13 12:23:50.853 +02:00 [Information] Profile service returned to the following claim types: "name email"
+2017-12-13 12:23:50.857 +02:00 [Debug] End userinfo request
+2017-12-13 12:23:54.990 +02:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type "Discovery"
+2017-12-13 12:23:54.992 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-12-13 12:23:54.993 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-12-13 12:23:54.998 +02:00 [Debug] Start discovery request
+2017-12-13 12:23:55.462 +02:00 [Debug] Request path "/.well-known/openid-configuration/jwks" matched to endpoint type "Discovery"
+2017-12-13 12:23:55.463 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint"
+2017-12-13 12:23:55.465 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2017-12-13 12:23:55.486 +02:00 [Debug] Start key discovery request
+2017-12-13 12:24:11.305 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:11.344 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:11.373 +02:00 [Debug] Request path "/connect/endsession" matched to endpoint type "Endsession"
+2017-12-13 12:24:11.376 +02:00 [Debug] Endpoint enabled: "Endsession", successfully created handler: "IdentityServer4.Endpoints.EndSessionEndpoint"
+2017-12-13 12:24:11.378 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.EndSessionEndpoint" for "/connect/endsession"
+2017-12-13 12:24:11.409 +02:00 [Debug] Processing signout request for "user5"
+2017-12-13 12:24:11.411 +02:00 [Debug] Start end session request validation
+2017-12-13 12:24:11.412 +02:00 [Debug] Start identity token validation
+2017-12-13 12:24:11.413 +02:00 [Debug] Client found: "movie_client" / "Moive Review App"
+2017-12-13 12:24:11.433 +02:00 [Debug] Calling into custom token validator: "IdentityServer4.Validation.DefaultCustomTokenValidator"
+2017-12-13 12:24:11.439 +02:00 [Debug] Token validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"ValidateLifetime\": false,
+  \"Claims\": {
+    \"nbf\": 1513160630,
+    \"exp\": 1513160930,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": \"movie_client\",
+    \"nonce\": \"636487574221990993.OTU5MmZlZTUtYjJiNi00MDQwLTk4NTEtZDkzMzEwODM0NWQzNGFmNTljMDAtMjVmMC00MjQ1LTliMzktYWUzMTZmMzQ0MjYz\",
+    \"iat\": 1513160630,
+    \"at_hash\": \"bXOFCJN11_R790pu0k7moA\",
+    \"sid\": \"26083c1f5c7e2df1c9bb36de6c41d01b\",
+    \"sub\": \"user5\",
+    \"auth_time\": 1513160629,
+    \"idp\": \"local\",
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:24:11.445 +02:00 [Information] End session request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"SubjectId\": \"user5\",
+  \"PostLogOutUri\": \"http://localhost:32361/signout-callback-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kytEqMkNa0o-hJb27UKsWXDaMcShA-MvtFjTVZlxdh7No76RYi3Xhv2cQ7LD8X1RrTcMXmCFZdGeIskW2MKQl_k1G1Ce-rvYO8bdbORJexKB76L97qPIYEC0igUpNUEyLw\",
+  \"Raw\": {
+    \"post_logout_redirect_uri\": \"http://localhost:32361/signout-callback-oidc\",
+    \"id_token_hint\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjJkYTlmMTYxMzA5NTZiYjE0ZGQ5ZDc4MTYyNmRkMjYxIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MTMxNjA2MzAsImV4cCI6MTUxMzE2MDkzMCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDoxOTQxIiwiYXVkIjoibW92aWVfY2xpZW50Iiwibm9uY2UiOiI2MzY0ODc1NzQyMjE5OTA5OTMuT1RVNU1tWmxaVFV0WWpKaU5pMDBNRFF3TFRrNE5URXRaRGt6TXpFd09ETTBOV1F6TkdGbU5UbGpNREF0TWpWbU1DMDBNalExTFRsaU16a3RZV1V6TVRabU16UTBNall6IiwiaWF0IjoxNTEzMTYwNjMwLCJhdF9oYXNoIjoiYlhPRkNKTjExX1I3OTBwdTBrN21vQSIsInNpZCI6IjI2MDgzYzFmNWM3ZTJkZjFjOWJiMzZkZTZjNDFkMDFiIiwic3ViIjoidXNlcjUiLCJhdXRoX3RpbWUiOjE1MTMxNjA2MjksImlkcCI6ImxvY2FsIiwiYW1yIjpbInB3ZCJdfQ.BuXmUxcWey23PJPO8QxzAH6hfcXfnNsOetRyg3RjTzHKT0TR52-EJopDK5xyJ1HkAIg3tpz-jalFoCCTAOT-Lvt5O7KalAdufxe4dFbdjFLKTtl3QRtvWZjfp2TLiI4g__4MtCUgP3PQfOthhS9aX0mJnS5fTiLYsPDM8DiXpY8ZT-xBQWAc4Adxf215wpUie8WZIwKfAltPtybQTT9fYz5dEKFBl4_YymLfIAPYhubuDIJtmKHZ74U7k0SOKqy8a0-VlXXhpYDT_xqhP47oEee_gUjxGFHvOqFo33XSbs56dm31JheQlVYsKZBrdicvsRfH_gaXqZWpB5OlNUJKeA\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kytEqMkNa0o-hJb27UKsWXDaMcShA-MvtFjTVZlxdh7No76RYi3Xhv2cQ7LD8X1RrTcMXmCFZdGeIskW2MKQl_k1G1Ce-rvYO8bdbORJexKB76L97qPIYEC0igUpNUEyLw\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:24:11.593 +02:00 [Debug] Success validating end session request from "movie_client"
+2017-12-13 12:24:11.759 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:11.777 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:11.883 +02:00 [Information] AuthenticationScheme: "idsrv" signed out.
+2017-12-13 12:24:12.153 +02:00 [Debug] Request path "/connect/endsession/callback" matched to endpoint type "Endsession"
+2017-12-13 12:24:12.164 +02:00 [Debug] Endpoint enabled: "Endsession", successfully created handler: "IdentityServer4.Endpoints.EndSessionCallbackEndpoint"
+2017-12-13 12:24:12.171 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.EndSessionCallbackEndpoint" for "/connect/endsession/callback"
+2017-12-13 12:24:12.213 +02:00 [Debug] Processing signout callback request
+2017-12-13 12:24:12.225 +02:00 [Debug] No client front-channel logout URLs
+2017-12-13 12:24:12.233 +02:00 [Debug] No client back-channel logout URLs
+2017-12-13 12:24:12.234 +02:00 [Information] Successful signout callback.
+2017-12-13 12:24:12.296 +02:00 [Debug] No client front-channel iframe urls
+2017-12-13 12:24:12.299 +02:00 [Debug] No client back-channel iframe urls
+2017-12-13 12:24:18.487 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type "Authorize"
+2017-12-13 12:24:18.489 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-12-13 12:24:18.491 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-12-13 12:24:18.498 +02:00 [Debug] Start authorize request
+2017-12-13 12:24:18.500 +02:00 [Debug] No user present in authorize request
+2017-12-13 12:24:18.501 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:24:18.502 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:24:18.502 +02:00 [Debug] No PKCE used.
+2017-12-13 12:24:18.503 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:24:18.505 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kySKgHEERhR1sINPoM7eeg2wH8z0fp4PHNMpbABqHJVog0lY5byw0_IsgqnzIH3zXkLcVmgCkRMxjOi5aYhuTU10qAIBDXIo2HMmi_UtRXM4adbbZ0xx2F3feSDtG_4GEQu04lIXFn-YdfLjaYnoPXqfEtbHUcRS4jcKgfoYZcggywSh2hwolZsOaYi-UBXuKkdNi_QMT654iqMGTrNZv8q9bglRzHaSgOXWIELI9rkUtRoT4Gz0e0yrXX9r9N_jj1nB1M3Z1-X9bh87C8WOs1R\",
+  \"Nonce\": \"636487574584481726.ZDdhM2NlZjQtNjhjNC00MWExLWFmODMtNDQzM2IxODg0NTQ4MWIyMWEyNTEtNzA4Zi00NDdmLWE0MTgtNGY0OWJmMGIyOGIx\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487574584481726.ZDdhM2NlZjQtNjhjNC00MWExLWFmODMtNDQzM2IxODg0NTQ4MWIyMWEyNTEtNzA4Zi00NDdmLWE0MTgtNGY0OWJmMGIyOGIx\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kySKgHEERhR1sINPoM7eeg2wH8z0fp4PHNMpbABqHJVog0lY5byw0_IsgqnzIH3zXkLcVmgCkRMxjOi5aYhuTU10qAIBDXIo2HMmi_UtRXM4adbbZ0xx2F3feSDtG_4GEQu04lIXFn-YdfLjaYnoPXqfEtbHUcRS4jcKgfoYZcggywSh2hwolZsOaYi-UBXuKkdNi_QMT654iqMGTrNZv8q9bglRzHaSgOXWIELI9rkUtRoT4Gz0e0yrXX9r9N_jj1nB1M3Z1-X9bh87C8WOs1R\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:24:18.522 +02:00 [Information] Showing login: User is not authenticated
+2017-12-13 12:24:18.617 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:24:18.618 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:24:18.620 +02:00 [Debug] No PKCE used.
+2017-12-13 12:24:18.621 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:24:24.532 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:24:24.533 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:24:24.534 +02:00 [Debug] No PKCE used.
+2017-12-13 12:24:24.535 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:24:36.665 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:24:36.667 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:24:36.668 +02:00 [Debug] No PKCE used.
+2017-12-13 12:24:36.669 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:24:45.738 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:24:45.741 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:24:45.812 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:45.821 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:45.831 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:24:45.833 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:24:45.835 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:24:45.843 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:24:45.845 +02:00 [Debug] User in authorize request: "user1"
+2017-12-13 12:24:45.848 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:24:45.849 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:24:45.853 +02:00 [Debug] No PKCE used.
+2017-12-13 12:24:45.856 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:24:45.858 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user1\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kySKgHEERhR1sINPoM7eeg2wH8z0fp4PHNMpbABqHJVog0lY5byw0_IsgqnzIH3zXkLcVmgCkRMxjOi5aYhuTU10qAIBDXIo2HMmi_UtRXM4adbbZ0xx2F3feSDtG_4GEQu04lIXFn-YdfLjaYnoPXqfEtbHUcRS4jcKgfoYZcggywSh2hwolZsOaYi-UBXuKkdNi_QMT654iqMGTrNZv8q9bglRzHaSgOXWIELI9rkUtRoT4Gz0e0yrXX9r9N_jj1nB1M3Z1-X9bh87C8WOs1R\",
+  \"Nonce\": \"636487574584481726.ZDdhM2NlZjQtNjhjNC00MWExLWFmODMtNDQzM2IxODg0NTQ4MWIyMWEyNTEtNzA4Zi00NDdmLWE0MTgtNGY0OWJmMGIyOGIx\",
+  \"SessionId\": \"f859f7b9998b3910b8f063b8a5736555\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487574584481726.ZDdhM2NlZjQtNjhjNC00MWExLWFmODMtNDQzM2IxODg0NTQ4MWIyMWEyNTEtNzA4Zi00NDdmLWE0MTgtNGY0OWJmMGIyOGIx\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kySKgHEERhR1sINPoM7eeg2wH8z0fp4PHNMpbABqHJVog0lY5byw0_IsgqnzIH3zXkLcVmgCkRMxjOi5aYhuTU10qAIBDXIo2HMmi_UtRXM4adbbZ0xx2F3feSDtG_4GEQu04lIXFn-YdfLjaYnoPXqfEtbHUcRS4jcKgfoYZcggywSh2hwolZsOaYi-UBXuKkdNi_QMT654iqMGTrNZv8q9bglRzHaSgOXWIELI9rkUtRoT4Gz0e0yrXX9r9N_jj1nB1M3Z1-X9bh87C8WOs1R\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:24:45.881 +02:00 [Debug] "user_consent" grant with value: "movie_client|user1" not found in store.
+2017-12-13 12:24:45.882 +02:00 [Debug] Found no prior consent from consent store, consent is required
+2017-12-13 12:24:45.883 +02:00 [Information] Showing consent: User has not yet consented
+2017-12-13 12:24:45.911 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:45.920 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:45.996 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:24:45.997 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:24:45.998 +02:00 [Debug] No PKCE used.
+2017-12-13 12:24:45.999 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:24:50.818 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:50.834 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:50.944 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:24:50.946 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:24:50.947 +02:00 [Debug] No PKCE used.
+2017-12-13 12:24:50.948 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:24:50.985 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:50.992 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:24:50.999 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:24:51.002 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:24:51.003 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:24:51.010 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:24:51.012 +02:00 [Debug] User in authorize request: "user1"
+2017-12-13 12:24:51.013 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:24:51.015 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:24:51.016 +02:00 [Debug] No PKCE used.
+2017-12-13 12:24:51.017 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:24:51.020 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user1\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kySKgHEERhR1sINPoM7eeg2wH8z0fp4PHNMpbABqHJVog0lY5byw0_IsgqnzIH3zXkLcVmgCkRMxjOi5aYhuTU10qAIBDXIo2HMmi_UtRXM4adbbZ0xx2F3feSDtG_4GEQu04lIXFn-YdfLjaYnoPXqfEtbHUcRS4jcKgfoYZcggywSh2hwolZsOaYi-UBXuKkdNi_QMT654iqMGTrNZv8q9bglRzHaSgOXWIELI9rkUtRoT4Gz0e0yrXX9r9N_jj1nB1M3Z1-X9bh87C8WOs1R\",
+  \"Nonce\": \"636487574584481726.ZDdhM2NlZjQtNjhjNC00MWExLWFmODMtNDQzM2IxODg0NTQ4MWIyMWEyNTEtNzA4Zi00NDdmLWE0MTgtNGY0OWJmMGIyOGIx\",
+  \"SessionId\": \"f859f7b9998b3910b8f063b8a5736555\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487574584481726.ZDdhM2NlZjQtNjhjNC00MWExLWFmODMtNDQzM2IxODg0NTQ4MWIyMWEyNTEtNzA4Zi00NDdmLWE0MTgtNGY0OWJmMGIyOGIx\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kySKgHEERhR1sINPoM7eeg2wH8z0fp4PHNMpbABqHJVog0lY5byw0_IsgqnzIH3zXkLcVmgCkRMxjOi5aYhuTU10qAIBDXIo2HMmi_UtRXM4adbbZ0xx2F3feSDtG_4GEQu04lIXFn-YdfLjaYnoPXqfEtbHUcRS4jcKgfoYZcggywSh2hwolZsOaYi-UBXuKkdNi_QMT654iqMGTrNZv8q9bglRzHaSgOXWIELI9rkUtRoT4Gz0e0yrXX9r9N_jj1nB1M3Z1-X9bh87C8WOs1R\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:24:51.042 +02:00 [Debug] "user_consent" grant with value: "movie_client|user1" not found in store.
+2017-12-13 12:24:51.044 +02:00 [Debug] Found no prior consent from consent store, consent is required
+2017-12-13 12:24:51.045 +02:00 [Information] User consented to scopes: ["openid", "profile", "email", "movie_api"]
+2017-12-13 12:24:51.054 +02:00 [Debug] User indicated to remember consent for scopes: ["openid", "profile", "email", "movie_api"]
+2017-12-13 12:24:51.058 +02:00 [Debug] Client allows remembering consent, and consent given. Updating consent store for subject: "user1"
+2017-12-13 12:24:51.085 +02:00 [Debug] Creating Hybrid Flow response.
+2017-12-13 12:24:51.135 +02:00 [Debug] Creating Implicit Flow response.
+2017-12-13 12:24:51.136 +02:00 [Debug] Getting claims for identity token for subject: "user1" and client: "movie_client"
+2017-12-13 12:24:51.137 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:24:51.163 +02:00 [Information] Authorize endpoint response
+"{
+  \"SubjectId\": \"user1\",
+  \"ClientId\": \"movie_client\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kySKgHEERhR1sINPoM7eeg2wH8z0fp4PHNMpbABqHJVog0lY5byw0_IsgqnzIH3zXkLcVmgCkRMxjOi5aYhuTU10qAIBDXIo2HMmi_UtRXM4adbbZ0xx2F3feSDtG_4GEQu04lIXFn-YdfLjaYnoPXqfEtbHUcRS4jcKgfoYZcggywSh2hwolZsOaYi-UBXuKkdNi_QMT654iqMGTrNZv8q9bglRzHaSgOXWIELI9rkUtRoT4Gz0e0yrXX9r9N_jj1nB1M3Z1-X9bh87C8WOs1R\",
+  \"Scope\": \"openid profile email movie_api\"
+}"
+2017-12-13 12:24:51.177 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:24:51.179 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:24:51.769 +02:00 [Debug] Request path "/connect/token" matched to endpoint type "Token"
+2017-12-13 12:24:51.774 +02:00 [Debug] Endpoint enabled: "Token", successfully created handler: "IdentityServer4.Endpoints.TokenEndpoint"
+2017-12-13 12:24:51.776 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2017-12-13 12:24:51.798 +02:00 [Debug] Start token request.
+2017-12-13 12:24:51.799 +02:00 [Debug] Start client validation
+2017-12-13 12:24:51.800 +02:00 [Debug] Start parsing Basic Authentication secret
+2017-12-13 12:24:51.804 +02:00 [Debug] Start parsing for secret in post body
+2017-12-13 12:24:51.808 +02:00 [Debug] Parser found secret: "PostBodySecretParser"
+2017-12-13 12:24:51.809 +02:00 [Debug] Secret id found: "movie_client"
+2017-12-13 12:24:51.810 +02:00 [Debug] Secret validator success: "HashedSharedSecretValidator"
+2017-12-13 12:24:51.812 +02:00 [Debug] Client validation success
+2017-12-13 12:24:51.813 +02:00 [Debug] Start token request validation
+2017-12-13 12:24:51.814 +02:00 [Debug] Start validation of authorization code token request
+2017-12-13 12:24:51.880 +02:00 [Debug] Validation of authorization code token request success
+2017-12-13 12:24:51.883 +02:00 [Information] Token request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"GrantType\": \"authorization_code\",
+  \"AuthorizationCode\": \"e10e516f9131f2cb23daf4f2b53179e65992ab70d2b238942dde43bc146a535d\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"client_secret\": \"***REDACTED***\",
+    \"code\": \"e10e516f9131f2cb23daf4f2b53179e65992ab70d2b238942dde43bc146a535d\",
+    \"grant_type\": \"authorization_code\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\"
+  }
+}"
+2017-12-13 12:24:51.905 +02:00 [Debug] Getting claims for access token for client: "movie_client"
+2017-12-13 12:24:51.906 +02:00 [Debug] Getting claims for access token for subject: "user1"
+2017-12-13 12:24:51.907 +02:00 [Debug] Get profile called for subject "user1" from client "Moive Review App" with claim types ["role"] via "ClaimsProviderAccessToken"
+2017-12-13 12:24:51.908 +02:00 [Debug] Issued claims: ["role"]
+2017-12-13 12:24:51.940 +02:00 [Debug] Getting claims for identity token for subject: "user1" and client: "movie_client"
+2017-12-13 12:24:51.942 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:24:51.974 +02:00 [Debug] Token request success.
+2017-12-13 12:24:52.105 +02:00 [Debug] Request path "/connect/userinfo" matched to endpoint type "Userinfo"
+2017-12-13 12:24:52.106 +02:00 [Debug] Endpoint enabled: "Userinfo", successfully created handler: "IdentityServer4.Endpoints.UserInfoEndpoint"
+2017-12-13 12:24:52.108 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2017-12-13 12:24:52.113 +02:00 [Debug] Start userinfo request
+2017-12-13 12:24:52.114 +02:00 [Debug] Bearer token found in header
+2017-12-13 12:24:52.124 +02:00 [Debug] Token validation success
+"{
+  \"ValidateLifetime\": true,
+  \"AccessTokenType\": \"Jwt\",
+  \"ExpectedScope\": \"openid\",
+  \"Claims\": {
+    \"nbf\": 1513160691,
+    \"exp\": 1513164291,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": [
+      \"http://localhost:1941/resources\",
+      \"movie_api\"
+    ],
+    \"client_id\": \"movie_client\",
+    \"sub\": \"user1\",
+    \"auth_time\": 1513160685,
+    \"idp\": \"local\",
+    \"role\": \"Reviewer\",
+    \"scope\": [
+      \"openid\",
+      \"profile\",
+      \"email\",
+      \"movie_api\"
+    ],
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:24:52.132 +02:00 [Debug] Creating userinfo response
+2017-12-13 12:24:52.134 +02:00 [Debug] Scopes in access token: "openid profile email movie_api"
+2017-12-13 12:24:52.140 +02:00 [Debug] Requested claim types: "sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified"
+2017-12-13 12:24:52.158 +02:00 [Debug] Get profile called for subject "user1" from client "Moive Review App" with claim types ["sub", "name", "family_name", "given_name", "middle_name", "nickname", "preferred_username", "profile", "picture", "website", "gender", "birthdate", "zoneinfo", "locale", "updated_at", "email", "email_verified"] via "UserInfoEndpoint"
+2017-12-13 12:24:52.161 +02:00 [Debug] Issued claims: ["name", "email"]
+2017-12-13 12:24:52.162 +02:00 [Information] Profile service returned to the following claim types: "name email"
+2017-12-13 12:24:52.187 +02:00 [Debug] End userinfo request
+2017-12-13 12:25:15.924 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:15.939 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:15.952 +02:00 [Debug] Request path "/connect/endsession" matched to endpoint type "Endsession"
+2017-12-13 12:25:15.954 +02:00 [Debug] Endpoint enabled: "Endsession", successfully created handler: "IdentityServer4.Endpoints.EndSessionEndpoint"
+2017-12-13 12:25:15.958 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.EndSessionEndpoint" for "/connect/endsession"
+2017-12-13 12:25:15.970 +02:00 [Debug] Processing signout request for "user1"
+2017-12-13 12:25:15.972 +02:00 [Debug] Start end session request validation
+2017-12-13 12:25:15.973 +02:00 [Debug] Start identity token validation
+2017-12-13 12:25:15.974 +02:00 [Debug] Client found: "movie_client" / "Moive Review App"
+2017-12-13 12:25:15.989 +02:00 [Debug] Calling into custom token validator: "IdentityServer4.Validation.DefaultCustomTokenValidator"
+2017-12-13 12:25:15.990 +02:00 [Debug] Token validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"ValidateLifetime\": false,
+  \"Claims\": {
+    \"nbf\": 1513160691,
+    \"exp\": 1513160991,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": \"movie_client\",
+    \"nonce\": \"636487574584481726.ZDdhM2NlZjQtNjhjNC00MWExLWFmODMtNDQzM2IxODg0NTQ4MWIyMWEyNTEtNzA4Zi00NDdmLWE0MTgtNGY0OWJmMGIyOGIx\",
+    \"iat\": 1513160691,
+    \"at_hash\": \"iojkNUULucslAgO3mdQApw\",
+    \"sid\": \"f859f7b9998b3910b8f063b8a5736555\",
+    \"sub\": \"user1\",
+    \"auth_time\": 1513160685,
+    \"idp\": \"local\",
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:25:15.994 +02:00 [Information] End session request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"SubjectId\": \"user1\",
+  \"PostLogOutUri\": \"http://localhost:32361/signout-callback-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kxHr_XiFNsH0Rbqx2NkhzZbH4xP3octcpfemaXwXoWZfnFIobiu0ZTFvzcyo1asnRfy2tSMUzxyPzGLfeecQxYkEgQixerUx4uj6iFSOnve7BHGn3SIb_qeVMkhMTeYRrs\",
+  \"Raw\": {
+    \"post_logout_redirect_uri\": \"http://localhost:32361/signout-callback-oidc\",
+    \"id_token_hint\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjJkYTlmMTYxMzA5NTZiYjE0ZGQ5ZDc4MTYyNmRkMjYxIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MTMxNjA2OTEsImV4cCI6MTUxMzE2MDk5MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDoxOTQxIiwiYXVkIjoibW92aWVfY2xpZW50Iiwibm9uY2UiOiI2MzY0ODc1NzQ1ODQ0ODE3MjYuWkRkaE0yTmxaalF0Tmpoak5DMDBNV0V4TFdGbU9ETXRORFF6TTJJeE9EZzBOVFE0TVdJeU1XRXlOVEV0TnpBNFppMDBORGRtTFdFME1UZ3ROR1kwT1dKbU1HSXlPR0l4IiwiaWF0IjoxNTEzMTYwNjkxLCJhdF9oYXNoIjoiaW9qa05VVUx1Y3NsQWdPM21kUUFwdyIsInNpZCI6ImY4NTlmN2I5OTk4YjM5MTBiOGYwNjNiOGE1NzM2NTU1Iiwic3ViIjoidXNlcjEiLCJhdXRoX3RpbWUiOjE1MTMxNjA2ODUsImlkcCI6ImxvY2FsIiwiYW1yIjpbInB3ZCJdfQ.YP0SGuijP3ekTqT84Gsy2HDNwTAjc__ohKfjPZzYfonqCyr6yxTgGreM8Y2v9-Mt4KkWgtNiyPyrRTGPCCz3xlejAfVKd0dv6oL3wSSj-haWFxibBEg-wKpj29j1mY_cVe1A-3v8JIdkGusCsfDuBLGWAWotbqkA6B8y1ZeaTpu8kDa4pRT3czmznl2N3qp4UQ13b6jUiAI37p7FatOx_P1iyrLvMx4SfGnvBDC9NH8qKpFCOMtQgDoCG1oaitYHkA7Fedbb1KjRQUNbT4gFVl8qhLA-Ko8C6hC-XxNnELQDbGw8kJBGwxnyxhpI7fnWc84UGvPxKYl925Vb2OG2cQ\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kxHr_XiFNsH0Rbqx2NkhzZbH4xP3octcpfemaXwXoWZfnFIobiu0ZTFvzcyo1asnRfy2tSMUzxyPzGLfeecQxYkEgQixerUx4uj6iFSOnve7BHGn3SIb_qeVMkhMTeYRrs\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:25:16.010 +02:00 [Debug] Success validating end session request from "movie_client"
+2017-12-13 12:25:16.032 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:16.038 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:16.121 +02:00 [Information] AuthenticationScheme: "idsrv" signed out.
+2017-12-13 12:25:16.351 +02:00 [Debug] Request path "/connect/endsession/callback" matched to endpoint type "Endsession"
+2017-12-13 12:25:16.366 +02:00 [Debug] Endpoint enabled: "Endsession", successfully created handler: "IdentityServer4.Endpoints.EndSessionCallbackEndpoint"
+2017-12-13 12:25:16.367 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.EndSessionCallbackEndpoint" for "/connect/endsession/callback"
+2017-12-13 12:25:16.400 +02:00 [Debug] Processing signout callback request
+2017-12-13 12:25:16.419 +02:00 [Debug] No client front-channel logout URLs
+2017-12-13 12:25:16.420 +02:00 [Debug] No client back-channel logout URLs
+2017-12-13 12:25:16.421 +02:00 [Information] Successful signout callback.
+2017-12-13 12:25:16.465 +02:00 [Debug] No client front-channel iframe urls
+2017-12-13 12:25:16.467 +02:00 [Debug] No client back-channel iframe urls
+2017-12-13 12:25:21.784 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type "Authorize"
+2017-12-13 12:25:21.785 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-12-13 12:25:21.787 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-12-13 12:25:21.806 +02:00 [Debug] Start authorize request
+2017-12-13 12:25:21.808 +02:00 [Debug] No user present in authorize request
+2017-12-13 12:25:21.809 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:25:21.811 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:25:21.812 +02:00 [Debug] No PKCE used.
+2017-12-13 12:25:21.814 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:25:21.815 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kwycY2FGMbG96kezZGLDANgQtmezMUmufJp3iyiGbAOS79_z9n2NrCkUIFl74jUR8xqyycGSRmeMnL5VwtR-hqCvxT6S4kXBz_mXCukMAuXYqunUf7mCxadnfU8uz_1Vj-NOeS4P_wZFB4EqMoCutK5pMs1mhHB5xBzGiHzFINFrNrYGhQHAVuJHAE-4NrQcx1PP90Wt8rUZHxWsFRZgnIBtYLCfsww2X9zt_gfg1klHeXSdiJN5GRd1qX2jWtSlbBSYVtCRuadiMa0eoVIPcxi\",
+  \"Nonce\": \"636487575215787835.YmQ4ZDkwYzEtMGRlZC00NzA1LWE1MDctZTliNDE5ODNmNmI4YjA3MmMwMjYtNzEwMi00NGEyLWEzNTctZmY3Y2UyZTFkYTA2\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487575215787835.YmQ4ZDkwYzEtMGRlZC00NzA1LWE1MDctZTliNDE5ODNmNmI4YjA3MmMwMjYtNzEwMi00NGEyLWEzNTctZmY3Y2UyZTFkYTA2\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kwycY2FGMbG96kezZGLDANgQtmezMUmufJp3iyiGbAOS79_z9n2NrCkUIFl74jUR8xqyycGSRmeMnL5VwtR-hqCvxT6S4kXBz_mXCukMAuXYqunUf7mCxadnfU8uz_1Vj-NOeS4P_wZFB4EqMoCutK5pMs1mhHB5xBzGiHzFINFrNrYGhQHAVuJHAE-4NrQcx1PP90Wt8rUZHxWsFRZgnIBtYLCfsww2X9zt_gfg1klHeXSdiJN5GRd1qX2jWtSlbBSYVtCRuadiMa0eoVIPcxi\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:25:21.841 +02:00 [Information] Showing login: User is not authenticated
+2017-12-13 12:25:22.005 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:25:22.007 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:25:22.007 +02:00 [Debug] No PKCE used.
+2017-12-13 12:25:22.009 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:25:28.813 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:25:28.816 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:25:28.883 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:28.891 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:28.901 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:25:28.903 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:25:28.904 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:25:28.914 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:25:28.916 +02:00 [Debug] User in authorize request: "user2"
+2017-12-13 12:25:28.917 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:25:28.918 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:25:28.919 +02:00 [Debug] No PKCE used.
+2017-12-13 12:25:28.921 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:25:28.922 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user2\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kwycY2FGMbG96kezZGLDANgQtmezMUmufJp3iyiGbAOS79_z9n2NrCkUIFl74jUR8xqyycGSRmeMnL5VwtR-hqCvxT6S4kXBz_mXCukMAuXYqunUf7mCxadnfU8uz_1Vj-NOeS4P_wZFB4EqMoCutK5pMs1mhHB5xBzGiHzFINFrNrYGhQHAVuJHAE-4NrQcx1PP90Wt8rUZHxWsFRZgnIBtYLCfsww2X9zt_gfg1klHeXSdiJN5GRd1qX2jWtSlbBSYVtCRuadiMa0eoVIPcxi\",
+  \"Nonce\": \"636487575215787835.YmQ4ZDkwYzEtMGRlZC00NzA1LWE1MDctZTliNDE5ODNmNmI4YjA3MmMwMjYtNzEwMi00NGEyLWEzNTctZmY3Y2UyZTFkYTA2\",
+  \"SessionId\": \"098be688c0e5e79a1f11b86fdf4a4e05\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487575215787835.YmQ4ZDkwYzEtMGRlZC00NzA1LWE1MDctZTliNDE5ODNmNmI4YjA3MmMwMjYtNzEwMi00NGEyLWEzNTctZmY3Y2UyZTFkYTA2\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kwycY2FGMbG96kezZGLDANgQtmezMUmufJp3iyiGbAOS79_z9n2NrCkUIFl74jUR8xqyycGSRmeMnL5VwtR-hqCvxT6S4kXBz_mXCukMAuXYqunUf7mCxadnfU8uz_1Vj-NOeS4P_wZFB4EqMoCutK5pMs1mhHB5xBzGiHzFINFrNrYGhQHAVuJHAE-4NrQcx1PP90Wt8rUZHxWsFRZgnIBtYLCfsww2X9zt_gfg1klHeXSdiJN5GRd1qX2jWtSlbBSYVtCRuadiMa0eoVIPcxi\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:25:28.982 +02:00 [Debug] "user_consent" grant with value: "movie_client|user2" not found in store.
+2017-12-13 12:25:28.985 +02:00 [Debug] Found no prior consent from consent store, consent is required
+2017-12-13 12:25:28.986 +02:00 [Information] Showing consent: User has not yet consented
+2017-12-13 12:25:29.018 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:29.029 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:29.105 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:25:29.107 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:25:29.108 +02:00 [Debug] No PKCE used.
+2017-12-13 12:25:29.109 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:25:33.920 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:33.944 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:34.076 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:25:34.078 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:25:34.081 +02:00 [Debug] No PKCE used.
+2017-12-13 12:25:34.082 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:25:34.122 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:34.132 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:34.141 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:25:34.143 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:25:34.144 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:25:34.152 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:25:34.155 +02:00 [Debug] User in authorize request: "user2"
+2017-12-13 12:25:34.156 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:25:34.157 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:25:34.158 +02:00 [Debug] No PKCE used.
+2017-12-13 12:25:34.159 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:25:34.161 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user2\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kwycY2FGMbG96kezZGLDANgQtmezMUmufJp3iyiGbAOS79_z9n2NrCkUIFl74jUR8xqyycGSRmeMnL5VwtR-hqCvxT6S4kXBz_mXCukMAuXYqunUf7mCxadnfU8uz_1Vj-NOeS4P_wZFB4EqMoCutK5pMs1mhHB5xBzGiHzFINFrNrYGhQHAVuJHAE-4NrQcx1PP90Wt8rUZHxWsFRZgnIBtYLCfsww2X9zt_gfg1klHeXSdiJN5GRd1qX2jWtSlbBSYVtCRuadiMa0eoVIPcxi\",
+  \"Nonce\": \"636487575215787835.YmQ4ZDkwYzEtMGRlZC00NzA1LWE1MDctZTliNDE5ODNmNmI4YjA3MmMwMjYtNzEwMi00NGEyLWEzNTctZmY3Y2UyZTFkYTA2\",
+  \"SessionId\": \"098be688c0e5e79a1f11b86fdf4a4e05\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487575215787835.YmQ4ZDkwYzEtMGRlZC00NzA1LWE1MDctZTliNDE5ODNmNmI4YjA3MmMwMjYtNzEwMi00NGEyLWEzNTctZmY3Y2UyZTFkYTA2\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kwycY2FGMbG96kezZGLDANgQtmezMUmufJp3iyiGbAOS79_z9n2NrCkUIFl74jUR8xqyycGSRmeMnL5VwtR-hqCvxT6S4kXBz_mXCukMAuXYqunUf7mCxadnfU8uz_1Vj-NOeS4P_wZFB4EqMoCutK5pMs1mhHB5xBzGiHzFINFrNrYGhQHAVuJHAE-4NrQcx1PP90Wt8rUZHxWsFRZgnIBtYLCfsww2X9zt_gfg1klHeXSdiJN5GRd1qX2jWtSlbBSYVtCRuadiMa0eoVIPcxi\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:25:34.187 +02:00 [Debug] "user_consent" grant with value: "movie_client|user2" not found in store.
+2017-12-13 12:25:34.188 +02:00 [Debug] Found no prior consent from consent store, consent is required
+2017-12-13 12:25:34.189 +02:00 [Information] User consented to scopes: ["openid", "profile", "email"]
+2017-12-13 12:25:34.196 +02:00 [Debug] User indicated to remember consent for scopes: ["openid", "profile", "email"]
+2017-12-13 12:25:34.198 +02:00 [Debug] Client allows remembering consent, and consent given. Updating consent store for subject: "user2"
+2017-12-13 12:25:34.222 +02:00 [Debug] Creating Hybrid Flow response.
+2017-12-13 12:25:34.275 +02:00 [Debug] Creating Implicit Flow response.
+2017-12-13 12:25:34.276 +02:00 [Debug] Getting claims for identity token for subject: "user2" and client: "movie_client"
+2017-12-13 12:25:34.278 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:25:34.299 +02:00 [Information] Authorize endpoint response
+"{
+  \"SubjectId\": \"user2\",
+  \"ClientId\": \"movie_client\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kwycY2FGMbG96kezZGLDANgQtmezMUmufJp3iyiGbAOS79_z9n2NrCkUIFl74jUR8xqyycGSRmeMnL5VwtR-hqCvxT6S4kXBz_mXCukMAuXYqunUf7mCxadnfU8uz_1Vj-NOeS4P_wZFB4EqMoCutK5pMs1mhHB5xBzGiHzFINFrNrYGhQHAVuJHAE-4NrQcx1PP90Wt8rUZHxWsFRZgnIBtYLCfsww2X9zt_gfg1klHeXSdiJN5GRd1qX2jWtSlbBSYVtCRuadiMa0eoVIPcxi\",
+  \"Scope\": \"openid profile email\"
+}"
+2017-12-13 12:25:34.308 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:25:34.311 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:25:34.715 +02:00 [Debug] Request path "/connect/token" matched to endpoint type "Token"
+2017-12-13 12:25:34.719 +02:00 [Debug] Endpoint enabled: "Token", successfully created handler: "IdentityServer4.Endpoints.TokenEndpoint"
+2017-12-13 12:25:34.721 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2017-12-13 12:25:34.728 +02:00 [Debug] Start token request.
+2017-12-13 12:25:34.731 +02:00 [Debug] Start client validation
+2017-12-13 12:25:34.732 +02:00 [Debug] Start parsing Basic Authentication secret
+2017-12-13 12:25:34.734 +02:00 [Debug] Start parsing for secret in post body
+2017-12-13 12:25:34.736 +02:00 [Debug] Parser found secret: "PostBodySecretParser"
+2017-12-13 12:25:34.736 +02:00 [Debug] Secret id found: "movie_client"
+2017-12-13 12:25:34.737 +02:00 [Debug] Secret validator success: "HashedSharedSecretValidator"
+2017-12-13 12:25:34.738 +02:00 [Debug] Client validation success
+2017-12-13 12:25:34.739 +02:00 [Debug] Start token request validation
+2017-12-13 12:25:34.740 +02:00 [Debug] Start validation of authorization code token request
+2017-12-13 12:25:34.792 +02:00 [Debug] Validation of authorization code token request success
+2017-12-13 12:25:34.794 +02:00 [Information] Token request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"GrantType\": \"authorization_code\",
+  \"AuthorizationCode\": \"294470a808e47035e644e65dc8f5b168b6feffbb32f3a14a628d70ad5e57e17e\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"client_secret\": \"***REDACTED***\",
+    \"code\": \"294470a808e47035e644e65dc8f5b168b6feffbb32f3a14a628d70ad5e57e17e\",
+    \"grant_type\": \"authorization_code\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\"
+  }
+}"
+2017-12-13 12:25:34.803 +02:00 [Debug] Getting claims for access token for client: "movie_client"
+2017-12-13 12:25:34.804 +02:00 [Debug] Getting claims for access token for subject: "user2"
+2017-12-13 12:25:34.805 +02:00 [Debug] Get profile called for subject "user2" from client "Moive Review App" with claim types [] via "ClaimsProviderAccessToken"
+2017-12-13 12:25:34.806 +02:00 [Debug] Issued claims: []
+2017-12-13 12:25:34.828 +02:00 [Debug] Getting claims for identity token for subject: "user2" and client: "movie_client"
+2017-12-13 12:25:34.829 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:25:34.855 +02:00 [Debug] Token request success.
+2017-12-13 12:25:34.978 +02:00 [Debug] Request path "/connect/userinfo" matched to endpoint type "Userinfo"
+2017-12-13 12:25:34.980 +02:00 [Debug] Endpoint enabled: "Userinfo", successfully created handler: "IdentityServer4.Endpoints.UserInfoEndpoint"
+2017-12-13 12:25:34.981 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2017-12-13 12:25:34.988 +02:00 [Debug] Start userinfo request
+2017-12-13 12:25:34.989 +02:00 [Debug] Bearer token found in header
+2017-12-13 12:25:35.001 +02:00 [Debug] Token validation success
+"{
+  \"ValidateLifetime\": true,
+  \"AccessTokenType\": \"Jwt\",
+  \"ExpectedScope\": \"openid\",
+  \"Claims\": {
+    \"nbf\": 1513160734,
+    \"exp\": 1513164334,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": \"http://localhost:1941/resources\",
+    \"client_id\": \"movie_client\",
+    \"sub\": \"user2\",
+    \"auth_time\": 1513160728,
+    \"idp\": \"local\",
+    \"scope\": [
+      \"openid\",
+      \"profile\",
+      \"email\"
+    ],
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:25:35.005 +02:00 [Debug] Creating userinfo response
+2017-12-13 12:25:35.006 +02:00 [Debug] Scopes in access token: "openid profile email"
+2017-12-13 12:25:35.007 +02:00 [Debug] Requested claim types: "sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified"
+2017-12-13 12:25:35.008 +02:00 [Debug] Get profile called for subject "user2" from client "Moive Review App" with claim types ["sub", "name", "family_name", "given_name", "middle_name", "nickname", "preferred_username", "profile", "picture", "website", "gender", "birthdate", "zoneinfo", "locale", "updated_at", "email", "email_verified"] via "UserInfoEndpoint"
+2017-12-13 12:25:35.011 +02:00 [Debug] Issued claims: ["name", "email"]
+2017-12-13 12:25:35.013 +02:00 [Information] Profile service returned to the following claim types: "name email"
+2017-12-13 12:25:35.046 +02:00 [Debug] End userinfo request
+2017-12-13 12:25:55.423 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:55.432 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:55.438 +02:00 [Debug] Request path "/connect/endsession" matched to endpoint type "Endsession"
+2017-12-13 12:25:55.439 +02:00 [Debug] Endpoint enabled: "Endsession", successfully created handler: "IdentityServer4.Endpoints.EndSessionEndpoint"
+2017-12-13 12:25:55.440 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.EndSessionEndpoint" for "/connect/endsession"
+2017-12-13 12:25:55.445 +02:00 [Debug] Processing signout request for "user2"
+2017-12-13 12:25:55.446 +02:00 [Debug] Start end session request validation
+2017-12-13 12:25:55.447 +02:00 [Debug] Start identity token validation
+2017-12-13 12:25:55.447 +02:00 [Debug] Client found: "movie_client" / "Moive Review App"
+2017-12-13 12:25:55.455 +02:00 [Debug] Calling into custom token validator: "IdentityServer4.Validation.DefaultCustomTokenValidator"
+2017-12-13 12:25:55.456 +02:00 [Debug] Token validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"ValidateLifetime\": false,
+  \"Claims\": {
+    \"nbf\": 1513160734,
+    \"exp\": 1513161034,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": \"movie_client\",
+    \"nonce\": \"636487575215787835.YmQ4ZDkwYzEtMGRlZC00NzA1LWE1MDctZTliNDE5ODNmNmI4YjA3MmMwMjYtNzEwMi00NGEyLWEzNTctZmY3Y2UyZTFkYTA2\",
+    \"iat\": 1513160734,
+    \"at_hash\": \"W5Z7bvLXW8AOOWdnALHzkQ\",
+    \"sid\": \"098be688c0e5e79a1f11b86fdf4a4e05\",
+    \"sub\": \"user2\",
+    \"auth_time\": 1513160728,
+    \"idp\": \"local\",
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:25:55.458 +02:00 [Information] End session request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"SubjectId\": \"user2\",
+  \"PostLogOutUri\": \"http://localhost:32361/signout-callback-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kyfVbDUPYpc2rI18wVCaW6JKUzF4PZ3Qm-l7942YepPsxtPpophLJyfYKoqCaFJSvpbHQY4GGwKCzQaClaZ1_kty-gjdtobzCgehxZgGe-Jiq3iprOe1Pb4fUwJMDIiwL8\",
+  \"Raw\": {
+    \"post_logout_redirect_uri\": \"http://localhost:32361/signout-callback-oidc\",
+    \"id_token_hint\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjJkYTlmMTYxMzA5NTZiYjE0ZGQ5ZDc4MTYyNmRkMjYxIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MTMxNjA3MzQsImV4cCI6MTUxMzE2MTAzNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDoxOTQxIiwiYXVkIjoibW92aWVfY2xpZW50Iiwibm9uY2UiOiI2MzY0ODc1NzUyMTU3ODc4MzUuWW1RNFpEa3dZekV0TUdSbFpDMDBOekExTFdFMU1EY3RaVGxpTkRFNU9ETm1ObUk0WWpBM01tTXdNall0TnpFd01pMDBOR0V5TFdFek5UY3RabVkzWTJVeVpURmtZVEEyIiwiaWF0IjoxNTEzMTYwNzM0LCJhdF9oYXNoIjoiVzVaN2J2TFhXOEFPT1dkbkFMSHprUSIsInNpZCI6IjA5OGJlNjg4YzBlNWU3OWExZjExYjg2ZmRmNGE0ZTA1Iiwic3ViIjoidXNlcjIiLCJhdXRoX3RpbWUiOjE1MTMxNjA3MjgsImlkcCI6ImxvY2FsIiwiYW1yIjpbInB3ZCJdfQ.Rvb5p5TEcx8th6Y-WLdNDRwK4bLZPhwfdAf84Yg8tjDtG2TBzX0fMYzBBjtapvaEe06NB2BpY1xSG3uujybOJx8DYGGlekCWV6mEc-w-3X-JEmHvCFqPweohCY1DcibwendKzkgDCeMCAuNf4fbEKCw2cDM39G8I24J0jrL2i7UF30MzCNedvDqz_4tLi8RlTAZJMskoW6dSnXto_ZWQfu6XGViSjGL4_EoNl37Fg9MEN1qDByZU8XuDpM2XPJuky6SiKjsqA0rIwfcvmIlcOnxYbDwCkxvjHAyxJp6NPBVzXS1-6grEwC34yI4E34BOoKOau6hWP0r7C15sNL3_mg\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kyfVbDUPYpc2rI18wVCaW6JKUzF4PZ3Qm-l7942YepPsxtPpophLJyfYKoqCaFJSvpbHQY4GGwKCzQaClaZ1_kty-gjdtobzCgehxZgGe-Jiq3iprOe1Pb4fUwJMDIiwL8\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:25:55.470 +02:00 [Debug] Success validating end session request from "movie_client"
+2017-12-13 12:25:55.485 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:55.490 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:25:55.556 +02:00 [Information] AuthenticationScheme: "idsrv" signed out.
+2017-12-13 12:25:55.728 +02:00 [Debug] Request path "/connect/endsession/callback" matched to endpoint type "Endsession"
+2017-12-13 12:25:55.735 +02:00 [Debug] Endpoint enabled: "Endsession", successfully created handler: "IdentityServer4.Endpoints.EndSessionCallbackEndpoint"
+2017-12-13 12:25:55.747 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.EndSessionCallbackEndpoint" for "/connect/endsession/callback"
+2017-12-13 12:25:55.773 +02:00 [Debug] Processing signout callback request
+2017-12-13 12:25:55.789 +02:00 [Debug] No client front-channel logout URLs
+2017-12-13 12:25:55.793 +02:00 [Debug] No client back-channel logout URLs
+2017-12-13 12:25:55.869 +02:00 [Information] Successful signout callback.
+2017-12-13 12:25:55.976 +02:00 [Debug] No client front-channel iframe urls
+2017-12-13 12:25:55.976 +02:00 [Debug] No client back-channel iframe urls
+2017-12-13 12:30:52.812 +02:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-12-13 12:30:53.047 +02:00 [Debug] Using "idsrv" as default scheme for authentication
+2017-12-13 12:30:53.060 +02:00 [Debug] Using "idsrv" as default scheme for sign-in
+2017-12-13 12:30:53.061 +02:00 [Debug] Using "idsrv" as default scheme for sign-out
+2017-12-13 12:30:53.062 +02:00 [Debug] Using "idsrv" as default scheme for challenge
+2017-12-13 12:30:53.063 +02:00 [Debug] Using "idsrv" as default scheme for forbid
+2017-12-13 12:31:38.801 +02:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type "Discovery"
+2017-12-13 12:31:38.825 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-12-13 12:31:38.828 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-12-13 12:31:38.858 +02:00 [Debug] Start discovery request
+2017-12-13 12:31:39.510 +02:00 [Debug] Request path "/.well-known/openid-configuration/jwks" matched to endpoint type "Discovery"
+2017-12-13 12:31:39.513 +02:00 [Debug] Endpoint enabled: "Discovery", successfully created handler: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint"
+2017-12-13 12:31:39.523 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2017-12-13 12:31:39.557 +02:00 [Debug] Start key discovery request
+2017-12-13 12:31:39.923 +02:00 [Debug] Request path "/connect/authorize" matched to endpoint type "Authorize"
+2017-12-13 12:31:39.952 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-12-13 12:31:39.954 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-12-13 12:31:39.982 +02:00 [Debug] Start authorize request
+2017-12-13 12:31:40.033 +02:00 [Debug] No user present in authorize request
+2017-12-13 12:31:40.053 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:31:40.119 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:31:40.124 +02:00 [Debug] No PKCE used.
+2017-12-13 12:31:40.271 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:31:40.331 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api offline_access\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kw3EQDaNnI33BXhO9FZ-zU2MwydlOn15zKu4ZpJOhOhaFTnCAK9bNwtkU4dKRGj99w29unFrmwiuxicL8sOi2G1etm57BnSwTcItmrITIaMlYqqXW0OnoRd6_LBTwLbUtboHDAVsSwjU-cxaoHNUDspVISy3H0mgKTOXIHR6f7Ic9yV050LhQImsTWYDiWiTfrl-5Ta2A0lxlBlGA6bzTvC8ctcJ-55DFvFVXwm3SuItJ9FolhIOXINBVhLdx9UUThWBJ-wD90yrQuNiHORP-TB\",
+  \"Nonce\": \"636487578997874158.ZDA1NjFmZmMtNWE0Ni00MmM4LWE2MmEtZDQyNGNkZmMwM2U5ZTJlNTQ5MjktYTdkZi00YTI1LWJiYmYtNGY4MjYzNTUyNzkx\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api offline_access\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487578997874158.ZDA1NjFmZmMtNWE0Ni00MmM4LWE2MmEtZDQyNGNkZmMwM2U5ZTJlNTQ5MjktYTdkZi00YTI1LWJiYmYtNGY4MjYzNTUyNzkx\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kw3EQDaNnI33BXhO9FZ-zU2MwydlOn15zKu4ZpJOhOhaFTnCAK9bNwtkU4dKRGj99w29unFrmwiuxicL8sOi2G1etm57BnSwTcItmrITIaMlYqqXW0OnoRd6_LBTwLbUtboHDAVsSwjU-cxaoHNUDspVISy3H0mgKTOXIHR6f7Ic9yV050LhQImsTWYDiWiTfrl-5Ta2A0lxlBlGA6bzTvC8ctcJ-55DFvFVXwm3SuItJ9FolhIOXINBVhLdx9UUThWBJ-wD90yrQuNiHORP-TB\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:31:40.382 +02:00 [Information] Showing login: User is not authenticated
+2017-12-13 12:31:41.034 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:31:41.035 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:31:41.036 +02:00 [Debug] No PKCE used.
+2017-12-13 12:31:41.038 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:32:01.117 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:32:01.194 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:32:01.263 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:32:01.341 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:32:01.351 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:32:01.359 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:32:01.361 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:32:01.425 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:32:01.458 +02:00 [Debug] User in authorize request: "user5"
+2017-12-13 12:32:01.459 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:32:01.463 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:32:01.464 +02:00 [Debug] No PKCE used.
+2017-12-13 12:32:01.468 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:32:01.475 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user5\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api offline_access\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kw3EQDaNnI33BXhO9FZ-zU2MwydlOn15zKu4ZpJOhOhaFTnCAK9bNwtkU4dKRGj99w29unFrmwiuxicL8sOi2G1etm57BnSwTcItmrITIaMlYqqXW0OnoRd6_LBTwLbUtboHDAVsSwjU-cxaoHNUDspVISy3H0mgKTOXIHR6f7Ic9yV050LhQImsTWYDiWiTfrl-5Ta2A0lxlBlGA6bzTvC8ctcJ-55DFvFVXwm3SuItJ9FolhIOXINBVhLdx9UUThWBJ-wD90yrQuNiHORP-TB\",
+  \"Nonce\": \"636487578997874158.ZDA1NjFmZmMtNWE0Ni00MmM4LWE2MmEtZDQyNGNkZmMwM2U5ZTJlNTQ5MjktYTdkZi00YTI1LWJiYmYtNGY4MjYzNTUyNzkx\",
+  \"SessionId\": \"f04a79695a714258aebb9189a7468f42\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api offline_access\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487578997874158.ZDA1NjFmZmMtNWE0Ni00MmM4LWE2MmEtZDQyNGNkZmMwM2U5ZTJlNTQ5MjktYTdkZi00YTI1LWJiYmYtNGY4MjYzNTUyNzkx\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kw3EQDaNnI33BXhO9FZ-zU2MwydlOn15zKu4ZpJOhOhaFTnCAK9bNwtkU4dKRGj99w29unFrmwiuxicL8sOi2G1etm57BnSwTcItmrITIaMlYqqXW0OnoRd6_LBTwLbUtboHDAVsSwjU-cxaoHNUDspVISy3H0mgKTOXIHR6f7Ic9yV050LhQImsTWYDiWiTfrl-5Ta2A0lxlBlGA6bzTvC8ctcJ-55DFvFVXwm3SuItJ9FolhIOXINBVhLdx9UUThWBJ-wD90yrQuNiHORP-TB\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:32:01.727 +02:00 [Debug] Scopes contains offline_access, consent is required
+2017-12-13 12:32:01.728 +02:00 [Information] Showing consent: User has not yet consented
+2017-12-13 12:32:01.951 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:32:01.963 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:32:02.156 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:32:02.158 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:32:02.159 +02:00 [Debug] No PKCE used.
+2017-12-13 12:32:02.160 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:32:10.179 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:32:10.206 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:32:10.433 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:32:10.437 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:32:10.442 +02:00 [Debug] No PKCE used.
+2017-12-13 12:32:10.446 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:32:10.675 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:32:10.684 +02:00 [Information] AuthenticationScheme: "idsrv" was successfully authenticated.
+2017-12-13 12:32:10.696 +02:00 [Debug] Request path "/connect/authorize/callback" matched to endpoint type "Authorize"
+2017-12-13 12:32:10.699 +02:00 [Debug] Endpoint enabled: "Authorize", successfully created handler: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint"
+2017-12-13 12:32:10.701 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2017-12-13 12:32:10.712 +02:00 [Debug] Start authorize callback request
+2017-12-13 12:32:10.732 +02:00 [Debug] User in authorize request: "user5"
+2017-12-13 12:32:10.734 +02:00 [Debug] Start authorize request protocol validation
+2017-12-13 12:32:10.734 +02:00 [Debug] Checking for PKCE parameters
+2017-12-13 12:32:10.735 +02:00 [Debug] No PKCE used.
+2017-12-13 12:32:10.737 +02:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-12-13 12:32:10.739 +02:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:32361/signin-oidc\"
+  ],
+  \"SubjectId\": \"user5\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile email movie_api offline_access\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kw3EQDaNnI33BXhO9FZ-zU2MwydlOn15zKu4ZpJOhOhaFTnCAK9bNwtkU4dKRGj99w29unFrmwiuxicL8sOi2G1etm57BnSwTcItmrITIaMlYqqXW0OnoRd6_LBTwLbUtboHDAVsSwjU-cxaoHNUDspVISy3H0mgKTOXIHR6f7Ic9yV050LhQImsTWYDiWiTfrl-5Ta2A0lxlBlGA6bzTvC8ctcJ-55DFvFVXwm3SuItJ9FolhIOXINBVhLdx9UUThWBJ-wD90yrQuNiHORP-TB\",
+  \"Nonce\": \"636487578997874158.ZDA1NjFmZmMtNWE0Ni00MmM4LWE2MmEtZDQyNGNkZmMwM2U5ZTJlNTQ5MjktYTdkZi00YTI1LWJiYmYtNGY4MjYzNTUyNzkx\",
+  \"SessionId\": \"f04a79695a714258aebb9189a7468f42\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile email movie_api offline_access\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636487578997874158.ZDA1NjFmZmMtNWE0Ni00MmM4LWE2MmEtZDQyNGNkZmMwM2U5ZTJlNTQ5MjktYTdkZi00YTI1LWJiYmYtNGY4MjYzNTUyNzkx\",
+    \"state\": \"CfDJ8N4zjveyM8xKhALhxro_9kw3EQDaNnI33BXhO9FZ-zU2MwydlOn15zKu4ZpJOhOhaFTnCAK9bNwtkU4dKRGj99w29unFrmwiuxicL8sOi2G1etm57BnSwTcItmrITIaMlYqqXW0OnoRd6_LBTwLbUtboHDAVsSwjU-cxaoHNUDspVISy3H0mgKTOXIHR6f7Ic9yV050LhQImsTWYDiWiTfrl-5Ta2A0lxlBlGA6bzTvC8ctcJ-55DFvFVXwm3SuItJ9FolhIOXINBVhLdx9UUThWBJ-wD90yrQuNiHORP-TB\",
+    \"x-client-SKU\": \"ID_NET\",
+    \"x-client-ver\": \"2.1.4.0\"
+  }
+}"
+2017-12-13 12:32:10.758 +02:00 [Debug] Scopes contains offline_access, consent is required
+2017-12-13 12:32:10.797 +02:00 [Information] User consented to scopes: ["openid", "profile", "email", "movie_api", "offline_access"]
+2017-12-13 12:32:10.859 +02:00 [Debug] User indicated to remember consent for scopes: ["openid", "profile", "email", "movie_api", "offline_access"]
+2017-12-13 12:32:10.884 +02:00 [Debug] Client allows remembering consent, and consent given. Updating consent store for subject: "user5"
+2017-12-13 12:32:11.005 +02:00 [Debug] Creating Hybrid Flow response.
+2017-12-13 12:32:11.161 +02:00 [Debug] Creating Implicit Flow response.
+2017-12-13 12:32:11.200 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:32:11.207 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:32:11.449 +02:00 [Information] Authorize endpoint response
+"{
+  \"SubjectId\": \"user5\",
+  \"ClientId\": \"movie_client\",
+  \"RedirectUri\": \"http://localhost:32361/signin-oidc\",
+  \"State\": \"CfDJ8N4zjveyM8xKhALhxro_9kw3EQDaNnI33BXhO9FZ-zU2MwydlOn15zKu4ZpJOhOhaFTnCAK9bNwtkU4dKRGj99w29unFrmwiuxicL8sOi2G1etm57BnSwTcItmrITIaMlYqqXW0OnoRd6_LBTwLbUtboHDAVsSwjU-cxaoHNUDspVISy3H0mgKTOXIHR6f7Ic9yV050LhQImsTWYDiWiTfrl-5Ta2A0lxlBlGA6bzTvC8ctcJ-55DFvFVXwm3SuItJ9FolhIOXINBVhLdx9UUThWBJ-wD90yrQuNiHORP-TB\",
+  \"Scope\": \"openid profile email movie_api offline_access\"
+}"
+2017-12-13 12:32:11.560 +02:00 [Debug] Augmenting SignInContext
+2017-12-13 12:32:11.568 +02:00 [Information] AuthenticationScheme: "idsrv" signed in.
+2017-12-13 12:32:12.133 +02:00 [Debug] Request path "/connect/token" matched to endpoint type "Token"
+2017-12-13 12:32:12.148 +02:00 [Debug] Endpoint enabled: "Token", successfully created handler: "IdentityServer4.Endpoints.TokenEndpoint"
+2017-12-13 12:32:12.149 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2017-12-13 12:32:12.187 +02:00 [Debug] Start token request.
+2017-12-13 12:32:12.211 +02:00 [Debug] Start client validation
+2017-12-13 12:32:12.245 +02:00 [Debug] Start parsing Basic Authentication secret
+2017-12-13 12:32:12.260 +02:00 [Debug] Start parsing for secret in post body
+2017-12-13 12:32:12.262 +02:00 [Debug] Parser found secret: "PostBodySecretParser"
+2017-12-13 12:32:12.263 +02:00 [Debug] Secret id found: "movie_client"
+2017-12-13 12:32:12.292 +02:00 [Debug] Secret validator success: "HashedSharedSecretValidator"
+2017-12-13 12:32:12.293 +02:00 [Debug] Client validation success
+2017-12-13 12:32:12.309 +02:00 [Debug] Start token request validation
+2017-12-13 12:32:12.357 +02:00 [Debug] Start validation of authorization code token request
+2017-12-13 12:32:12.451 +02:00 [Debug] Validation of authorization code token request success
+2017-12-13 12:32:12.480 +02:00 [Information] Token request validation success
+"{
+  \"ClientId\": \"movie_client\",
+  \"ClientName\": \"Moive Review App\",
+  \"GrantType\": \"authorization_code\",
+  \"AuthorizationCode\": \"38089e1bef02e88275d9541cbb0c2a19c9411b721a53eb9013cc394e1c7fdbd3\",
+  \"Raw\": {
+    \"client_id\": \"movie_client\",
+    \"client_secret\": \"***REDACTED***\",
+    \"code\": \"38089e1bef02e88275d9541cbb0c2a19c9411b721a53eb9013cc394e1c7fdbd3\",
+    \"grant_type\": \"authorization_code\",
+    \"redirect_uri\": \"http://localhost:32361/signin-oidc\"
+  }
+}"
+2017-12-13 12:32:12.562 +02:00 [Debug] Getting claims for access token for client: "movie_client"
+2017-12-13 12:32:12.564 +02:00 [Debug] Getting claims for access token for subject: "user5"
+2017-12-13 12:32:12.573 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["role"] via "ClaimsProviderAccessToken"
+2017-12-13 12:32:12.580 +02:00 [Debug] Issued claims: ["role"]
+2017-12-13 12:32:12.617 +02:00 [Debug] Creating refresh token
+2017-12-13 12:32:12.624 +02:00 [Debug] Setting an absolute lifetime: 2592000
+2017-12-13 12:32:12.734 +02:00 [Debug] Getting claims for identity token for subject: "user5" and client: "movie_client"
+2017-12-13 12:32:12.735 +02:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-12-13 12:32:12.757 +02:00 [Debug] Token request success.
+2017-12-13 12:32:12.887 +02:00 [Debug] Request path "/connect/userinfo" matched to endpoint type "Userinfo"
+2017-12-13 12:32:12.891 +02:00 [Debug] Endpoint enabled: "Userinfo", successfully created handler: "IdentityServer4.Endpoints.UserInfoEndpoint"
+2017-12-13 12:32:12.892 +02:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2017-12-13 12:32:12.914 +02:00 [Debug] Start userinfo request
+2017-12-13 12:32:12.921 +02:00 [Debug] Bearer token found in header
+2017-12-13 12:32:12.995 +02:00 [Debug] Token validation success
+"{
+  \"ValidateLifetime\": true,
+  \"AccessTokenType\": \"Jwt\",
+  \"ExpectedScope\": \"openid\",
+  \"Claims\": {
+    \"nbf\": 1513161132,
+    \"exp\": 1513164732,
+    \"iss\": \"http://localhost:1941\",
+    \"aud\": [
+      \"http://localhost:1941/resources\",
+      \"movie_api\"
+    ],
+    \"client_id\": \"movie_client\",
+    \"sub\": \"user5\",
+    \"auth_time\": 1513161121,
+    \"idp\": \"local\",
+    \"role\": \"Admin\",
+    \"scope\": [
+      \"openid\",
+      \"profile\",
+      \"email\",
+      \"movie_api\",
+      \"offline_access\"
+    ],
+    \"amr\": \"pwd\"
+  }
+}"
+2017-12-13 12:32:13.012 +02:00 [Debug] Creating userinfo response
+2017-12-13 12:32:13.026 +02:00 [Debug] Scopes in access token: "openid profile email movie_api offline_access"
+2017-12-13 12:32:13.036 +02:00 [Debug] Requested claim types: "sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified"
+2017-12-13 12:32:13.037 +02:00 [Debug] Get profile called for subject "user5" from client "Moive Review App" with claim types ["sub", "name", "family_name", "given_name", "middle_name", "nickname", "preferred_username", "profile", "picture", "website", "gender", "birthdate", "zoneinfo", "locale", "updated_at", "email", "email_verified"] via "UserInfoEndpoint"
+2017-12-13 12:32:13.040 +02:00 [Debug] Issued claims: ["name", "email"]
+2017-12-13 12:32:13.041 +02:00 [Information] Profile service returned to the following claim types: "name email"
+2017-12-13 12:32:13.048 +02:00 [Debug] End userinfo request

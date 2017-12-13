@@ -27,9 +27,17 @@ namespace Host
                 .AddInMemoryIdentityResources(Config.IdentityResources)
                 .AddTestUsers(Config.Users);
 
+
             // TODO: add google authentication handler services to DI
             // ClientId = "998042782978-s07498t8i8jas7npj4crve1skpromf37.apps.googleusercontent.com",
             // ClientSecret = "HsnwJri_53zn7VcO1Fm7THBb"
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    options.ClientId = "998042782978-s07498t8i8jas7npj4crve1skpromf37.apps.googleusercontent.com";
+                    options.ClientSecret = "HsnwJri_53zn7VcO1Fm7THBb";
+                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+                });            
         }
 
         public void Configure(IApplicationBuilder app)

@@ -18,6 +18,7 @@ namespace Host
         public static IEnumerable<ApiResource> ApiResources = new List<ApiResource>
         {
             // TODO: define movie_api scope (with role claims)
+            new ApiResource("movie_api", "Movie Review Service") { UserClaims = { "role" } }
         };
 
         public static IEnumerable<Client> Clients = new List<Client>
@@ -28,7 +29,11 @@ namespace Host
                 ClientName = "Moive Review App",
 
                 // TODO: change to hybrid and provide secret
-                AllowedGrantTypes = GrantTypes.Implicit,
+                AllowedGrantTypes = GrantTypes.Hybrid,
+
+                AllowOfflineAccess = true,
+
+                ClientSecrets = { new Secret("secret".Sha256()) },
 
                 RedirectUris =
                 {
@@ -46,6 +51,7 @@ namespace Host
                     IdentityServerConstants.StandardScopes.Profile,
                     IdentityServerConstants.StandardScopes.Email,
                     // TODO: add movie_api scope
+                    "movie_api"
                 }
             }
         };

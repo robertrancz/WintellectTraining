@@ -33,20 +33,49 @@ namespace MoviesWebApp
                 {
                     options.LoginPath = "/Account/Login";
                     options.AccessDeniedPath = "/Account/AccessDenied";
+                })
+                // TODO: add the OIDC authentication handler                            
+                .AddOpenIdConnect("oidc", options =>
+                {
+                    options.Authority = "http://localhost:1941/";
+                    options.RequireHttpsMetadata = false;
+
+                    options.ClientId = "movie_client";
+                    options.ResponseType = "id_token";
+
+                    options.Scope.Add("openid");
+                    options.Scope.Add("profile");
+                    options.Scope.Add("email");
+                    // TODO: configure the TokenValidationParameters to use "name" and "role" claims
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        NameClaimType = "name",
+                        RoleClaimType = "role"
+                    };
+
+                    // TODO: add events to handle OnTicketReceived to add app-specific claims
+                    options.Events = new OpenIdConnectEvents
+                    {
+                        OnTicketReceived = n =>
+                        {
+                            var idSvc = n.HttpContext.RequestServices.GetRequiredService<MovieIdentityService>();
+                            var appClaims = idSvc.GetClaimsForUser(n.Principal.FindFirst("sub")?.Value);
+                            n.Principal.Identities.First().AddClaims(appClaims);
+                            return Task.CompletedTask;
+                        }
+                    };
+                })
+                // TODO: add Google authentication handler
+                // google settings
+                // ClientId = "998042782978-lrga3i7tf8g6eotqv3ltjhqd2bguhnf4.apps.googleusercontent.com",
+                // ClientSecret = "lAVx368q3GDXZS_dlrrntrDN"
+                .AddGoogle("Google", options =>
+                {
+                    options.ClientId = "998042782978-lrga3i7tf8g6eotqv3ltjhqd2bguhnf4.apps.googleusercontent.com";
+                    options.ClientSecret = "lAVx368q3GDXZS_dlrrntrDN";
                 });
-
             
-            // TODO: add the OIDC authentication handler
-            // TODO: configure the TokenValidationParameters to use "name" and "role" claims
-            // TODO: add events to handle OnTicketReceived to add app-specific claims
-
             
-            // TODO: add Google authentication handler
-            // google settings
-            // ClientId = "998042782978-lrga3i7tf8g6eotqv3ltjhqd2bguhnf4.apps.googleusercontent.com",
-            // ClientSecret = "lAVx368q3GDXZS_dlrrntrDN"
-
-
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
             services.AddAuthorization(options =>

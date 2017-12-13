@@ -41,17 +41,20 @@ namespace MoviesWebApp
 
                     options.ClientId = "movie_client";
                     // TODO: add client secret
-
+                    options.ClientSecret = "secret";
                     // TODO: change to hybrid
-                    options.ResponseType = "id_token";
+                    options.ResponseType = "code id_token";
 
                     options.SaveTokens = true;
                     // TODO: set GetClaimsFromUserInfoEndpoint
+                    options.GetClaimsFromUserInfoEndpoint = true;
 
                     options.Scope.Add("openid");
                     options.Scope.Add("profile");
                     options.Scope.Add("email");
                     // TODO: add movie_api scope
+                    options.Scope.Add("movie_api");
+                    options.Scope.Add("offline_access");
 
                     options.TokenValidationParameters = new TokenValidationParameters
                     {

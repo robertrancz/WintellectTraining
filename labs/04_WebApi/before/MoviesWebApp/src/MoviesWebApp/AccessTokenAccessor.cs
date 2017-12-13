@@ -17,7 +17,8 @@ namespace MoviesWebApp
         public Task<string> GetAccessTokenAsync()
         {
             // TODO: return access token from current authenticated user's cookie
-            return Task.FromResult<string>(null);
+            //return Task.FromResult<string>("access_token");
+            return _context.HttpContext.GetTokenAsync("access_token");
         }
     }
 }

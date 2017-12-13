@@ -34,15 +34,17 @@ namespace MoviesWebApp
                     options.LoginPath = "/Account/Login";
                     options.AccessDeniedPath = "/Account/AccessDenied";
                 })
-                .AddGoogle("Google", options =>
-                {
-                    options.ClientId = "998042782978-lrga3i7tf8g6eotqv3ltjhqd2bguhnf4.apps.googleusercontent.com";
-                    options.ClientSecret = "lAVx368q3GDXZS_dlrrntrDN";
-                })
+                //.AddGoogle("Google", options =>
+                //{
+                //    options.ClientId = "998042782978-lrga3i7tf8g6eotqv3ltjhqd2bguhnf4.apps.googleusercontent.com";
+                //    options.ClientSecret = "lAVx368q3GDXZS_dlrrntrDN";
+                //})
                 .AddOpenIdConnect("oidc", options =>
                 {
                     options.Authority = "http://localhost:1941/";
                     options.RequireHttpsMetadata = false;
+
+                    options.SaveTokens = true;
 
                     options.ClientId = "movie_client";
                     options.ResponseType = "id_token";

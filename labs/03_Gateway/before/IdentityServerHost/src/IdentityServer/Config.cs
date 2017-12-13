@@ -29,6 +29,7 @@ namespace Host
                 },
 
 				// TODO: add a post logout redirect URI
+                PostLogoutRedirectUris = { "http://localhost:32361/signout-callback-oidc" },
 
                 AllowedScopes =
                 {

@@ -11,7 +11,13 @@ namespace MoviesWebApi
         public void ConfigureServices(IServiceCollection services)
         {
             // TODO: add authentication services and bearer token authentication handler
-
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication("Bearer", options =>
+                {
+                    options.Authority = "http://localhost:1941/";
+                    options.RequireHttpsMetadata = false;
+                    options.ApiName = "movie_api";
+                });
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 

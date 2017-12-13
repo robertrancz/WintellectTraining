@@ -22,8 +22,9 @@ namespace MoviesWebApp.Controllers
         [HttpGet]
         public IActionResult Login(string returnUrl)
         {
-            // TODO: change this to call challenge 
-            return View(new LoginViewModel { ReturnUrl = returnUrl });
+            // TODO: change this to call challenge
+            return Challenge(new AuthenticationProperties() { RedirectUri = returnUrl ?? "/" }, "Google" /*"oidc"*/);
+            //return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
 
         // NOTICE: this was commented out since it's unnecessary now
